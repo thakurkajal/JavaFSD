@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Creating Form</title>
+</head>
+<body>
+	<form action="MyFirstHTMLPage.html"> 
+		<h4>Fill Employee Details</h4>
+		<input type="text" name="empName" placeholder="Enter employee name here" /><br>
+		Email: <input type="Email" placeholder="Enter email ID" />
+		Password<input type="Password" required /><br>
+		Mobile Number<input type="number" pattern="[0-9]{10}" maxlength="10"><br>	
+		
+		Check your education details:
+		<input type="checkbox" name="education">10th
+		<input type="checkbox" name="education">12th
+		<input type="checkbox" name="education">Graduation
+		<input type="checkbox" name="education">PG
+		<input type="checkbox" name="education">Doctorate
+		<br>
+		Please select your gender
+		<input type="radio" name="gender">Male
+		<input type="radio" name="gender">Female
+		<input type="radio" name="gender">Trans
+		<input type="radio" name="gender">Prefer Not To Say
+		<br>
+
+		<select>
+			<option>Select Birth Country</option>
+			<option>India</option>
+			<option>USA</option>
+			<option>UK</option>
+		</select>
+		<br>
+		<select multiple>
+			<option>Select Multiple Country where you worked</option>
+			<option>Australia</option>
+			<option>South Africa</option>
+			<option>Nepal</option>
+		</select>
+		<br>
+
+		<input type="date" placeholder="Enter employee DOJ"><br>
+		<input type="time" placeholder="Enter the time of joining"><br>
+
+		<input type="range" min="0" max="9" placeholder="Please rate this form from 0(lowest) to 9(highest)">
+		<input type="submit" value="Submit Details">
+	</form>
+</body>
+</html>
