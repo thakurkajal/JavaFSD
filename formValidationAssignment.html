@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validating User Input with JS</title>
+</head>
+<body>
+
+<form action="dashboard.html" onsubmit="return validateForm();">
+	<input type="text" id="userName" placeholder="Enter your Name"><br>
+	<input type="text" id="userLocation" placeholder="Your Current Location"><br>
+	<input type="text" id="userAge" placeholder="Your Age"><br>
+	<input type="text" id="userEmail" placeholder="Your Email"><br>
+	<p>Education:</p>
+	Less Than 10th<input type="checkbox" id="userEducation">
+	10th<input type="checkbox" id="userEducation">
+	12th<input type="checkbox" id="userEducation">
+	Graduation<input type="checkbox" id="userEducation">
+	PG<input type="checkbox" id="userEducation">
+	Doctorate<input type="checkbox" id="userEducation"><br>
+
+	<p>Gender:</p>
+	<input type="radio" id="gender">Female
+	<input type="radio" id="gender">Male
+	<input type="radio" id="gender">LGBT+
+	<input type="radio" id="gender">Don't Disclose<br>
+	
+	<input type="submit" value="Submit">
+</form>
+
+
+
+
+<script type="text/javascript">
+	function validateForm(){
+
+		if(document.getElementById('userName').value.length < 3){
+			alert("Username should be of minumum 3 characters...");
+			document.getElementById('userName').value = "";
+			document.getElementById('userName').focus();
+			return false;
+		}
+		else if(!isNaN(document.getElementById('userName').value)){
+			alert("Username can't contain numbers...");
+			document.getElementById('userName').value = "";
+			document.getElementById('userName').focus();
+			return false;
+		}
+		else if(document.getElementById('userLocation').value.length < 1){
+			alert("Location can't be put as empty");
+			document.getElementById('userLocation').focus();
+			return false;
+		}
+		else if(document.getElementById('userAge').value.length < 1){
+			alert("Age can't be put as empty");
+			document.getElementById('userAge').focus();
+			return false;
+		}
+		else if(isNaN(document.getElementById('userAge').value)){
+			alert("Age should be in numbers unless you are from Mars :)");
+			document.getElementById('userAge').value = "";
+			document.getElementById('userAge').focus();
+			return false;
+		}
+		else if(!(document.getElementById('userEmail').value.match("@"))){
+			alert("Please enter a valid email id.");
+			document.getElementById('userEmail').value = "";
+			document.getElementById('userEmail').focus();
+			return false;
+		}
+		else if(!(document.getElementById('userEmail').value.match(".com"))){
+			alert("Please enter a valid email id.");
+			document.getElementById('userEmail').value = "";
+			document.getElementById('userEmail').focus();
+			return false;
+		}
+		else if((document.getElementById('userEducation').value.length) > 0){
+			alert("Please enter atleast one education detail");
+			document.getElementById('userEducation').value = "";
+			document.getElementById('userEducation').focus();
+			return false; 
+		} 
+		else if(document.getElementById('gender').value.length > 0){
+			alert("Please enter atleast one option");
+			document.getElementById('gender').value = "";
+			document.getElementById('gender').focus();
+			return false;
+		}
+
+		return true;
+	}
+</script>
+</body>
+</html>
