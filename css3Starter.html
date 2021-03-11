@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exploring CSS</title>
+</head>
+<body>
+	<style type="text/css">
+		 img{
+			width: 200px;
+			height: 200px;	
+			transition: all 2s ease;	
+			-webkit-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			-moz-transition: all 2s ease;	
+			overflow: hidden;
+			transform: rotate(360deg);	
+		}
+
+		.zoomin img:hover{
+			width: 300px;
+			height: 300px;	
+		}
+	</style>
+
+
+	<div class="zoomin">
+		<img src="images/Albert E.jpg">
+	</div>
+</body>
+</html>

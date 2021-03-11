@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider Show</title>
+</head>
+<body>
+	<style type="text/css">
+			#slider{
+				padding: 0;
+				margin: 10%;
+
+			}	
+
+			#slider ul li img{
+				width: 500px;
+				height: 150px;
+			}
+
+			#slider ul .sliderImage{
+				list-style-type: none;
+				float: left;
+				overflow: hidden;
+				transition: 3s all ease; 	
+				height: 40px;
+			}
+
+			#slider ul .sliderImage:hover{
+				height: 150px;
+				border-radius: 5%;
+			}
+
+			#slider ul li video{
+				width: 500px;
+				height: 250px;
+			}
+
+			#slider ul .sliderVideo{
+				list-style-type: none;
+				float: right;
+				overflow: hidden;
+				transition: 1s all ease; 	
+				height: 60px;
+			}
+
+			#slider ul .sliderVideo:hover{
+				height: 250px;
+				border-radius: 5%;
+			}
+	</style>
+
+
+	<div id="slider">
+		<ul>
+			<li class="sliderImage"><img src="images/nature1.jpg" alt="Image Can't Be Displayed"></li>
+			<li class="sliderImage"><img src="images/nature2.jpg" alt="Image Can't Be Displayed"></li>
+			<li class="sliderImage"><img src="images/nature3.jpg" alt="Image Can't Be Displayed"></li>
+			<li class="sliderImage"><img src="images/nature4.jpg" alt="Image Can't Be Displayed"></li>
+			<li class="sliderImage"><img src="images/nature5.jpg" alt="Image Can't Be Displayed"></li> 
+
+
+			<li class="sliderVideo"><video controls><source src="videos/video1.mp4" type="video/mp4">
+									This video isn't supported in this browser</video></li> 
+			<li class="sliderVideo"><video controls><source src="videos/video2.mp4" type="video/mp4">
+									This video isn't supported in this browser</video></li>
+			<li class="sliderVideo"><video controls><source src="videos/video3.mp4" type="video/mp4">
+									This video isn't supported in this browser</video></li>
+			<li class="sliderVideo"><video controls><source src="videos/video4.mp4" type="video/mp4">
+									This video isn't supported in this browser</video></li>
+			<li class="sliderVideo"><video controls><source src="videos/video5.mp4" type="video/mp4">
+									This video isn't supported in this browser</video></li>   
+		</ul>
+
+		
+	</div>
+</body>
+</html>
