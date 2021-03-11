@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working withn Variables and Dynamic Listing</title>
+</head>
+<body>
+
+
+<button onclick="doSomething();">CLICK ME</button>
+
+<!-- <input type="text" id="inputBox"/> -->
+<button onclick="getInput();">Display</button>
+
+
+
+
+
+<script type="text/javascript">
+	function getInput(){
+		// alert(document.getElementById("inputBox").value);
+		var inputText = prompt("Please enter your Name", "IBM");
+		console.log("Welcome " + inputText);
+	}
+	function doSomething(){
+		var val = "IBM Training";
+
+		var v = 6768;
+
+		var arr = [78, 66, 909, 4315];
+
+		for (var i = 0; i < arr.length; i++) {
+			console.log(arr[i]);
+		}
+
+		//Use the for-in
+		for(var value in arr){
+			//it write output on window
+			document.write(arr[value]);
+			document.write(" ");
+			//it write output on console
+			console.log(arr[value]);
+		}
+		
+		//Create a JS object
+		var values = {userName: "Deepthi", userId:66};
+		// console.log(values.length);
+
+		var key = Object.keys(values);
+		console.log(key)
+
+		 for(var val = 0; val < key.length; val++){
+		 	console.log(values[key[val]]);
+		 }
+
+		// Get the values out from the object
+		//console.log("Name : " + values["userName"]);
+		// console.log("Id : " + values["userId"]);
+
+		// Traverse through this object by a for-in
+		// for(var value in values){
+		// 	console.log(values[value]);
+		// }
+
+		// Access the variable type:
+		// console.log("Type of val is : " + typeof(val));
+
+		// We ca even change the type of a variable in JS, on the go
+		val = 679;
+
+		// console.log("After changing the value of val, type is : " + typeof(val));
+
+		// console.log(arr[5]);
+
+		// arr[9] = 90;
+
+		// console.log(arr[9]);
+	}
+
+	//Working with dymanic listing
+	var count;
+	var displayList = "<select>";
+	displayList += "<option>Select your Registration ID:</option>";
+
+	for(count = 567; count <= 1871; count++){
+		displayList += "<option>" + count + "</option>";
+	}
+	displayList += "</select>";
+	document.write(displayList);
+
+
+</script>
+</body>
+</html>

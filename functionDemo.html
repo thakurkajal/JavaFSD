@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using Functions in JS</title>
+</head>
+<body>
+
+	<div id= "dateDiv" onclick="func();">
+		Click Me to Call A Function
+	</div>
+
+	<button onclick="showDate();">Show Date</button>
+		
+	<script type="text/javascript">
+	
+	
+		function showDate(){
+			// document.getElementById('dateDiv').innerHTML = new Date().toLocaleTimeString();
+			// Call showCurrentTime repeatedly after 1 second i.e., timer will not stop until we close the browser
+			setInterval(function(){showCurrentTime();}, 1000)
+			
+			//When we click on button then after 3secs it will show the current time once and it will stop
+			// setTimeout(function(){showCurrentTime();}, 3000);
+		}
+	
+		function showCurrentTime(){
+			document.getElementById('dateDiv').innerHTML = new Date().toLocaleTimeString();
+		}
+	
+	
+		function func(){
+			// document.write("Inside func...");
+			//console.log("Addition of numbers : " + addNumbersUsingParameters(67, 99));
+	
+	
+			// Create an inline function:
+			// var myFunc = function(firstNum, secondNum){ return firstNum + secondNum;}
+	
+	
+			// Works with the latest versions of JS
+			var myFunc = (firstNum, secondNum) => {
+				return firstNum + secondNum;
+			}
+	
+			console.log("Addtition of numbers is : " + myFunc(45, 80));
+		}
+	
+		// function addNumbers(){
+		// 	var firstNum = 90, secondNum = 112;
+	
+		// 	return firstNum + secondNum;
+	
+		// 	// console.log(firstNum + secondNum);
+		// }
+		// function addNumbersUsingParameters(firstNum = 0, secondNum = 0){
+	// 	console.log(arguments.length);
+	// 	return firstNum + secondNum;
+	// }
+</script>
+</body>
+</html>

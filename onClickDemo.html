@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using onClick()</title>
+</head>
+<body>
+<!-- <button onclick="alert('Wow, this works'); console.log('Button was just clicked...');">Click Me...</button> -->
+
+<button onclick="countClicks();">Counter...</button>
+<div id="displayCount">
+	
+</div>
+
+
+
+<script type="text/javascript">
+
+	var counter = 0;
+
+	// A JS function called on the click of a button
+	function countClicks(){
+		
+		counter++;
+		console.log("The button was clicked " + counter + " times...");
+		document.getElementById("displayCount").innerHTML = "The button was clicked " + counter + " times...";
+	}
+</script>
+</body>
+</html>
