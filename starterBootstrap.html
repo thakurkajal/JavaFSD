@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with BootStrap</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+
+	<style type="text/css">
+		.container{
+			text-align: center;
+			background-color: #f73058;
+			padding: 100px;
+		}
+		.container-fluid{
+			text-align: center;
+			background-color: #f73058;
+			padding: 100px; 
+		}
+		
+		.gridDemo div[class^="col"]{
+			background-color: #f73058;
+			border: 1px solid #fff;
+			text-align: center;
+			color: #fff;
+			padding: 5px;
+		}
+
+	</style>
+<!--Using abbr tah when we hover cursor over IBM it will show the abbrevation which we mentioned in title-->
+	<abbr title="International Business Machine">IBM</abbr>
+
+	<div class="container">First container using div tag is a fixed size container</div>
+
+	<div class="container-fluid">Second container using div tags with fluid is something which fit according to screen size</div>
+
+	<img class="img-fluid" src="images/nature3.jpg" alt="Image can't be displayed">
+
+	<!-- In Bootstrap one can display h1 to h6 headings in 2 ways: <div> and <h1> -->
+
+	<div class="h1">My heading 1</div>
+	<div class="h2">My heading 2</div>
+	<div class="h3">My heading 3</div>
+	<div class="h4">My heading 4</div>
+	<div class="h5">My heading 5</div>
+	<div class="h6">My heading 6</div>
+
+	<h1 class="display-1">Display heading 1</h1>
+	<h2 class="display-2">Display heading 2</h2>
+	<h3 class="display-3">Display heading 2</h2>
+	<h4 class="display-4">Display heading 2</h2>
+	<h5 class="display-5">Display heading 2</h2>
+	<h6 class="display-6">Display heading 2</h2>
+
+	<div class="">I am going to mark <mark>BOOTSTRAP</mark> with mark tag inside div tag...</div>
+
+	<blockquote>International Business Machines Corporation is an American multinational technology company headquartered in <q>Armonk, New York</q>, with operations in over 170 countries</blockquote>
+
+<!--When we wanted to make A GRID SYSTEM in two ways i.e.,horizontally & vertically -->
+<div class="gridDemo">
+	<div class="row">
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-2">Class: col-md-2</div>
+		<div class="col-md-2">Class: col-md-2</div>
+		<div class="col-md-2">Class: col-md-2</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">Class: col-md-6</div>
+	</div>
+</div>
+
+<br>
+
+<div class="gridDemo">
+	<div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+		<div class="col-md-1">Class: col-md-1</div>
+	</div>
+
+	<div>
+		<div class="col-md-2">Class: col-md-2</div>
+		<div class="col-md-2">Class: col-md-2</div>
+		<div class="col-md-2">Class: col-md-2</div>
+	</div>
+
+	<div>
+		<div class="col-md-6">Class: col-md-6</div>
+	</div>
+</div>
+</body>
+</html>

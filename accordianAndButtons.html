@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creating Accordian, Different type of Buttons with BootStrap</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div id="queries">
+		<div class="card">
+			<div class="card-header" id="q1">
+				<h4 class="card-title">
+					<a href="#a1" data-toggle="collapse" data-parent="#queries">
+						What's the best thing you love about cricket?
+					</a>
+				</h4>
+			</div>
+			<div class="collapse" id="a1">
+				<div class="card-body">
+					Best thing about cricket is MSD.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="q2">
+				<h4 class="card-title">
+					<a href="#a2" data-toggle="collapse" data-parent="#queries">
+						Who is your favorite bowler in cricket?
+					</a>
+				</h4>
+			</div>
+			<div class="collapse" id="a2">
+				<div class="card-body">
+					Jasprit Bumrah
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="q3">
+				<h4 class="card-title">
+					<a href="#a3" data-toggle="collapse" data-parent="#queries">
+						Who is your favorite batsman in cricket?
+					</a>
+				</h4>
+			</div>
+			<div class="collapse" id="a3">
+				<div class="card-body">
+						Mahendra Singh Dhoni	
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Creating button horizontally and vertically with BS -->
+	<div class="btn-group">
+		<button class="btn btn-success">Xioami</button>
+		<button class="btn btn-success">Sony</button>
+		<button class="btn btn-success">Samsung</button>
+		<button class="btn btn-success">OnePlus</button>
+	</div>
+
+	<!-- Vertical Button Groups -->
+	<div class="btn-group-vertical">
+		<button class="btn btn-warning">Xioami</button>
+		<button class="btn btn-warning">Sony</button>
+		<button class="btn btn-warning">Samsung</button>
+		<button class="btn btn-warning">OnePlus</button>
+	</div>
+
+	<!-- Dropdowns -->
+	<div class="dropdown">
+		<button class="btn btn-success dropdown-toggle" id="aboutUs" data-toggle="dropdown">About us</button>
+		<div class="dropdown-menu">
+			<a href="#" class="dropdown-item active">Home</a>
+			<a href="#" class="dropdown-item">Our Team</a>
+			<a href="#" class="dropdown-item">Our Journey</a>
+			<a href="#" class="dropdown-item">Contact Us</a>
+		</div>
+	</div>
+
+	<!-- Input Groups here -->
+	<div class="input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text">₹</span>
+		</div>
+		<input type="text" class="form-control" placeholder="10000"/>
+		<div class="input-group-append">
+			<span class="input-group-text">.000</span>
+		</div>
+	</div>
+
+
+	<!--Creating a navigation tabs -->
+
+<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a href="#" class="nav-link">About Us</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link active">Our Journey</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">Our Culture</a>
+		</li>
+	</ul>
+
+
+<!--Creating a pagination i.e, at the bottom of the page link to next page -->
+<nav>
+		<ul class="pagination">
+			<li class="page-item">
+				<a href="#" class="page-link">
+					<span>&laquo;</span>
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					1
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					2
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					3
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					4
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					5
+				</a>
+			</li>
+			<li class="page-item active">
+				<a href="#" class="page-link">
+					6
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					7
+				</a>
+			</li><li class="page-item">
+				<a href="#" class="page-link">
+					8
+				</a>
+			</li><li class="page-item">
+				<a href="#" class="page-link">
+					9
+				</a>
+			</li>
+			<li class="page-item">
+				<a href="#" class="page-link">
+					<span>&raquo;</span>
+				</a>
+			</li>
+			
+		</ul>
+	</nav>
+
+	<!-- Include this script for BootStrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>

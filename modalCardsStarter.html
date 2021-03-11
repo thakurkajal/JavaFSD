@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Building Modals, Cards, Collapse Toggle and Jumbotrons with BootStrap</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+
+	<!--Building alert modals with bootstrap classes -->
+
+	<button class="btn btn-primary" data-toggle="modal" data-target="#clicked">Click Me</button>
+
+	<!-- Defining Modal now -->
+
+	<div id="clicked" class="modal fade" role="dialog" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="modalTitle">IBM</h3>
+					<button class="close" data-dismiss="modal"><span>&times;</span></button>   <!-- &times; gives "x" mark for closing -->
+				</div>
+				<div class="modal-body">
+					Feels already good to be a part of this Organization :)
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<!--Creating a card here with BS -->
+	<div class="card text-white bg-primary" style="max-width: 22rem">
+		<div class="card-body">
+			<h3 class="card-title">Apple</h3>
+			<p class="card-text">The MacBook Air is a line of laptop computers developed and manufactured by Apple Inc.</p>
+			<a href="https://www.apple.com/in/macbook-air" class="card-link text-white">Macbook Air 2020</a>
+			<a href="https://www.apple.com/in/macbook-pro" class="card-link text-white">Macbook Pro 2020</a>
+		</div>
+	</div>
+
+	<!-- Creating collapse fiels using data-toggle with BS -->
+	<p>
+		<a data-toggle="collapse" href="#football">Football</a>
+	</p>
+	<div class="collapse" id="football">
+		<p>
+			Football, also called association football or soccer, game in which two teams of 11 players, using any part of their bodies except their hands and arms, try to maneuver the ball into the opposing team’s goal. Only the goalkeeper is permitted to handle the ball and may do so only within the penalty area surrounding the goal. The team that scores more goals wins.
+			<a href="https://en.wikipedia.org/wiki/Football">To know More about FootBall please click here...</a>
+		</p>
+	</div>
+
+	<!-- Creating Junbotrons using BS.....We use it generally to create a hoarding or hoarding like structure.-->
+	<div class="container-fluid">
+			<div class="jumbotron">
+				<h1>Cricket Fantasy</h1>
+				<p>I'm already feeling so good because it's a IPL season...</p>
+			</div>
+	</div>
+
+
+	<!-- Include this script for BootStrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+</html>
