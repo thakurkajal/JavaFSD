@@ -1,0 +1,47 @@
+
+  
+  
+  .centertext{
+    text-align: center;
+     padding: 70px 16px;
+  
+  }
+  
+     .img-responsive {display:block; height: 180px; width: 90%;}
+      .img-responsive1 {display:block; height: 180px; width: 90%;}
+       .img-responsive2 {display:block; height: 180px; width: 90%;}
+  
+     .right-video{
+  
+    
+      text-align: left;
+  
+      padding: 10px 10px;
+      width: 300px;
+      height: 150px;
+  
+  }
+  
+  
+  .left-video{
+  
+   
+   text-align: left;
+  
+    padding: 10px 10px;
+    width: 300px;
+    height: 150px;
+    
+  
+  
+  }
+  .last-video{
+    text-align: left;
+  
+    padding: 10px 30px;
+    width: 200px;
+    height: 150px;
+  }
+  
+   
+  

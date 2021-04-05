@@ -1,0 +1,47 @@
+<!--Get a Workout Table Data-->
+<h2>Get Details From Workout</h2>
+<form>
+    <button (click) = "searchOnWorkout()" class="bg-success">All Workout Details</button>
+    <div *ngIf="flag">
+        <div *ngFor="let workout of sWorkout">
+            <h1>Workout Description: {{workout.workoutDescription}}</h1><br>
+            <h1>Avg Calories Burned/min: {{workout.averageCalorieBurn}}</h1><br>
+            <h1>Name of Workout: {{workout.workoutName}}</h1><br>
+        </div>
+    </div>
+</form>
+
+
+<!--Creating a Workout table Entry-->
+<div>
+    <h1>Create a New Workout</h1>
+    
+        <form>
+            Workout Name<input type="string" name="workoutName" placeholder="Workout Name" [(ngModel)] = "cWorkout.workoutName"><br>
+            Calories Burn<input type="number" name="averageCalorieBurn" placeholder="Average Calories Burn By Workout" [(ngModel)] = "cWorkout.averageCalorieBurn"><br>
+            Description<input type="string" name="workoutDescription" placeholder="Workout Description" [(ngModel)] = "cWorkout.workoutDescription"><br>
+        
+            <button (click)="addNewWorkout()">Add Workout</button> 
+        </form>
+</div>
+
+<!--updating Workout Table-->
+<div>
+    <h1>Update a New Workout</h1>
+
+    <form>
+        Workout Name<input type="string" name="workoutName" placeholder="Workout Name" [(ngModel)] = "uWorkout.workoutName"><br>
+        Calories Burn<input type="number" name="averageCalorieBurn" placeholder="Average Calories Burn By Workout" [(ngModel)] = "uWorkout.averageCalorieBurn"><br>
+        Description<input type="string" name="workoutDescription" placeholder="Workout Description" [(ngModel)] = "uWorkout.workoutDescription"><br>
+       
+        <button (click)="updateWorkout()">Update Workout</button> 
+    </form>
+</div>
+
+<!--Deleting Workout From Table-->
+<h1>Delete a Workout</h1>
+
+<form>
+Workout Name<input type="text" name="workoutName" placeholder="Workout Name to Delete" [(ngModel)] = "dWorkout.workoutName"/><br>
+<button (click) = "deleteWorkout()">Delete Workout</button>
+</form>

@@ -1,0 +1,42 @@
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="sidenav">
+    <div class="login-main-text">
+       <h2>FitnessTracker<br> Login Page</h2>
+       <p>DON'T WISH FOR A GOOD BODY.WORK FOR IT</p>
+    </div>
+ </div>
+  <div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+                <label>FullName </label><br>
+                <form>
+                    <div class="form-group">
+<input type="text" 
+id="fullNameUser"
+placeholder="FullName" 
+[(ngModel)]="fullNameUser"
+name = "fullNameUser"
+required 
+ minlength="3"><br>
+<label>Password</label><br>
+<input type="password" placeholder="Password"
+[(ngModel)] = "newPassword"
+name = "newPassword"
+required 
+><br>
+<br>
+<button type="button"(click)="getUsers()" class="btn btn-black">Submit</button>
+<a href="http://localhost:4200/signup" class="btn btn-secondary">REGISTER</a>
+            </div> 
+</form>
+</div>
+</div>
+<p>{{this.result}}</p>
+</div>
+
+

@@ -1,0 +1,35 @@
+
+<input type="number" placeholder="Enter user ID" [(ngModel)]="userID">
+<button class='btn btn-primary' (click)="display()">Get Workouts</button>
+<br>
+<div class="screen">
+<div class="screen1">
+<!-- <h4>Your Workouts for the day</h4> -->
+
+<table cellspacing="1"> 
+    <th *ngFor = "let column of header">
+      <div ng-if="check">
+        {{column}}
+      </div>
+      </th>  
+      <tr *ngFor = "let item of responseWorkoutData">
+        <!-- <td *ngFor = "let column of header">
+          {{row[column]}}
+        </td> -->
+        <td>{{item.userWorkoutId}}</td>
+        <td>{{item.workoutName}}</td>
+        <td>{{item.workoutTime}}</td>
+        <app-modal [outputWorkout]="item"></app-modal>
+        <!-- <td><a class='btn btn-primary' routerLink = "modal">Start Workout</a></td> -->
+      </tr>
+</table>
+
+</div>
+<div class="screen2">
+<img src="../../assets/images/imagePro.jpeg" alt="image workout">
+</div> 
+<!-- <router-outlet></router-outlet> -->
+</div>
+
+ 
+  

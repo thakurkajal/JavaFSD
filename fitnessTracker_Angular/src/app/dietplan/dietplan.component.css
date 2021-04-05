@@ -1,0 +1,43 @@
+body { background: #eee }
+
+.container-fluid { max-width: 1200px; }
+
+header {
+	background: #000000;
+	padding: 1em 1em;
+	color: #fff;
+	margin-bottom: 1em;
+
+}
+
+.card {
+	background: #fff;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+	height: 460px;
+	width: 250px;
+	
+}
+
+[class*="row"] {
+	margin-bottom: 1em;
+  justify-content: center;
+}
+
+[class*="col-"] {
+	background: #efefef;
+	border: 1px solid #ddd;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	width: 100%;
+}
+
+
+
+.card:hover
+{
+   box-shadow: 0 0 100px black;
+}
+
+.card {cursor: pointer;}
+

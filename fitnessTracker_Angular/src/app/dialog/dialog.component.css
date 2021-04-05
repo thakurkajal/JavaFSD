@@ -1,0 +1,12 @@
+.modal-header, .modal-body, .timer{
+    color : black
+}
+.timer{
+    
+    font-size: 60px;
+  }
+
+  .operation{
+      float: left;
+  }
+  

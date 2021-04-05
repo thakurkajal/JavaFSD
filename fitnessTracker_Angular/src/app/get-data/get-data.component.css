@@ -1,0 +1,36 @@
+table, td, th {
+    border: 3px solid white;
+    
+  }
+table{
+  border-collapse:separate;
+  border-spacing:0 15px;
+}
+
+  th,
+  td {
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    /* padding: 5px; */
+    color: black;
+  }
+
+.screen{
+  background-color: white;
+}
+
+h4{
+  margin: 50px;
+}
+
+img{
+  width: 550px;
+  height: 500px;
+  margin-left: 100px;
+  /* padding-left: 10px;
+  margin-left: 600px; */
+}
+.screen{
+  display: flex;
+}

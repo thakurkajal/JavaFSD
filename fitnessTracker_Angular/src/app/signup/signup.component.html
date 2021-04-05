@@ -1,0 +1,163 @@
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<meta charset = "UTF-8" />
+<div *ngIf="!message">
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+     
+     <form  (ngSubmit)="registerNow()" #myForm="ngForm">
+        <p>{{notifyMessage}}</p>
+        
+        <div class="form-group">
+            <label for="fullName"> FullName</label>
+            <input 
+            type="text"
+            id="fullName" 
+            class="form-control" 
+            placeholder="Enter FullName"
+            required 
+            minlength="5"
+            maxlength="15"
+            ngModel name="fullName"
+            #fullName = "ngModel"
+            [(ngModel)]="user.fullName" 
+            name="fullName"
+            >
+            <div class="alert alert-danger" *ngIf="fullName.touched && !fullName.valid">
+                <div *ngIf="fullName.errors.required">*required</div>
+                <div *ngIf="fullName.errors.minlength">Name should be atleast of 5 characters</div>
+                <div *ngIf="fullName.errors.maxlength">Name should be atleast of 15 in length</div>
+                <div *ngIf="fullName.errors.pattern">Should match the pre-defined pattern</div>
+              </div>
+            </div> 
+
+            <div class="form-group">
+              <label for="phoneNumber"> PhoneNumber</label>
+              <input 
+              type="number"
+              id="phoneNumber" 
+              class="form-control" 
+              placeholder="Enter your PhoneNumber"
+              required 
+              maxlength="10"
+              
+              ngModel name="phoneNumber"
+              #phoneNumber = "ngModel"
+              [(ngModel)]="user.phoneNumber" 
+              name="phoneNumber"
+              >
+              <div class="alert alert-danger" *ngIf="phoneNumber.touched && !phoneNumber.valid">
+                  <div *ngIf="phoneNumber.errors.required">*required</div>
+                  <div *ngIf="phoneNumber.errors.maxlength">Phone Number should be atleast of 10 in length</div>
+                  <div *ngIf="phoneNumber.errors.pattern">Should match the pre-defined pattern</div>
+                </div>
+              </div>   
+              <div class="form-group">
+                <label for="password"> Password</label>
+                <input 
+                type="password"
+                id="password" 
+                class="form-control" 
+                placeholder="Enter password"
+                required 
+                maxlength="8"     
+                ngModel name="password"
+                #password = "ngModel"
+                [(ngModel)]="user.password" 
+                name="password"
+                >
+                <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                    <div *ngIf="password.errors.required">*required</div>
+                    <div *ngIf="password.errors.maxlength">Password should be atleast of 8 in length</div>     
+                  </div>
+                </div>          
+                <div class="form-group">
+                  <label for="height">Your Height</label>
+                  <input 
+                  type="number"
+                  id="height" 
+                  class="form-control" 
+                  placeholder="Enter your Height"
+                  required 
+                  maxlength="4"
+                  
+                  ngModel name="height"
+                  #height = "ngModel"
+                  [(ngModel)]="user.height" 
+                  name="height"
+                  >     
+                  <div class="alert alert-danger" *ngIf="height.touched && !height.valid">
+                      <div *ngIf="height.errors.required">*required</div>
+                      <div *ngIf="height.errors.maxlength">Phone Number should be atleast of 4 in length</div>
+                      <div *ngIf="height.errors.pattern">Should match the pre-defined pattern</div>
+                    </div>
+                  </div>     
+                  <div class="form-group">
+                    <label for="weight">Your Weight</label>
+                    <input 
+                    type="number"
+                    id="weight" 
+                    class="form-control" 
+                    placeholder="Enter your Weight"
+                    required 
+                    maxlength="4"
+                   
+                    ngModel name="weight"
+                    #weight = "ngModel"
+                    [(ngModel)]="user.weight" 
+                    name="weight"
+                    >
+                    <div class="alert alert-danger" *ngIf="weight.touched && !weight.valid">
+                        <div *ngIf="weight.errors.required">*required</div>
+                        <div *ngIf="weight.errors.maxlength">Weight should be atleast of 4 in length</div>
+                        <div *ngIf="weight.errors.pattern">Should match the pre-defined pattern</div>
+                      </div>
+                    </div>                      
+                    <div class="form-group">
+                      <label for="bmi">Your Bmi(Optional)</label>
+                      <input 
+                      type="number"
+                      id="bmi" 
+                      class="form-control" 
+                      placeholder="Enter your bmi"
+                      maxlength="3"
+                     
+                      ngModel name="bmi"
+                      #bmi = "ngModel"
+                      [(ngModel)]="user.bmi" 
+                      name="bmi"
+                      >
+                      <div class="alert alert-danger" *ngIf="bmi.touched && !bmi.valid">
+                          <div *ngIf="bmi.errors.maxlength">bmishould be atleast of 3 in length</div>
+                          <div *ngIf="bmi.errors.pattern">Should match the pre-defined pattern</div>
+                        </div>
+                      </div>                   
+                     
+                        <div class="form-group">
+                        <label for="yearsOfSubscription">Choose Years of Subscription(Optional)</label> <br>
+                        <select name="yearsOfSubscription" id="yearsOfSubscription"[(ngModel)]="user.yearsOfSubscription" >
+                          <option value="" disabled selected>Select your option</option>
+                          <option value="1">1 year(₹300/-)</option>
+                          <option value="2">2 years(₹550/-)</option>
+                          
+                        </select>
+                      </div>
+                <button type="submit"  class="btn btn-success" [disabled]="!myForm.form.valid">Register</button> &nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary"  (click) = "showPayment()"  [disabled]="!myForm.form.valid">Payment</button><br><br>
+                <div id ="myPaypalButtons" > 
+              </div>
+            </form>
+            </div>
+    </div>
+</div>
+</div>
+<div *ngIf="message">
+  <h1>You are Currently logged in, Log out to register new user </h1>
+  <a class="btn btn-secondary" href="http://localhost:4200/signup">LOG OUT</a>
+</div>
+  
+<router-outlet></router-outlet>

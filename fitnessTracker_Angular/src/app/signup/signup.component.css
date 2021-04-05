@@ -1,0 +1,47 @@
+
+body {
+    padding: 100% 70%  20% 30%;
+
+    height: 50px;
+}
+fieldset {
+    border: thin solid #ccc; 
+    border-radius: 10px;
+    padding: 50px;
+    padding-right: 90px;
+    background: #fbfbfb;
+}
+legend {
+   color: #678;
+}
+.form-control {
+    width: 60%;
+}
+label small {
+    color: #678 !important;
+}
+span.req {
+    color:maroon;
+    font-size: 112%;
+}
+
+.container{
+
+   padding-top: 30px;
+    padding-bottom: 90px;
+    padding-left: 100px;
+
+}
+
+
+
+.btn-success{
+
+    width: 100px;
+}
+
+.myPaypalButtons{
+    width : 70px;
+}
+
+
