@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.ibm.springdemo.Student.stdStream&apos; in &apos;com.ibm.springdemo.Student&apos;&#x0D;&#x0A;- Original project: &apos;springdemo&apos;&#x0D;&#x0A;- Original element: &apos;com.ibm.springdemo.Student.stdStream&apos;&#x0D;&#x0A;- Getter method name: &apos;getStdStream&apos;&#x0D;&#x0A;- Setter method name: &apos;setStdStream&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;stdStream&apos;" flags="589830" getter="getStdStream" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ibm.springdemo{Student.java[Student^stdStream" insertion="8" setter="setStdStream" stamp="1614156552034" version="1.0" visibility="1"/>
+</session>

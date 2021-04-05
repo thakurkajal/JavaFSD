@@ -1,0 +1,5 @@
+package com.kajal.banking.customer;
+
+public class CustomerAction {
+
+}

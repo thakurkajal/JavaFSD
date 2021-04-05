@@ -1,0 +1,11 @@
+package com.kajal.banking.wallet;
+
+import java.sql.SQLException;
+
+import com.kajal.banking.Customer;
+
+public interface WalletInterfaceInfo {
+	public boolean save(Customer customer) throws SQLException, ClassNotFoundException ;
+	
+	public Customer findOne(String mobileNo) throws ClassNotFoundException, SQLException;
+}

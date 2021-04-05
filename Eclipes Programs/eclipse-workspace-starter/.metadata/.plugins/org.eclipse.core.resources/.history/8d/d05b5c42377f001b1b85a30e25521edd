@@ -1,0 +1,12 @@
+package com.ibm.kajal.service;
+
+public class CreateAccount {
+	
+	String customerName; 
+	int mobileNumber;
+	public void createCustomerAccount(String customerName, int mobileNumber) {
+		this.customerName = customerName;
+		this.mobileNumber = mobileNumber;
+		System.out.println("Customer account created");
+	}
+}

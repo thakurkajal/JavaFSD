@@ -1,0 +1,17 @@
+package com.ibm.eis.ui;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	System.out.println(" ");
+	System.out.println("Enter the employee id: ");
+	 int empId; 
+	 String empName;
+	 String empDesignation;
+	 int empSalary;
+	 String empInsuranceScheme;
+
+}

@@ -1,0 +1,34 @@
+package com.ibm.springdemo;
+
+public class EngineeringStudent implements Student{
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
+	EngineeringStudent(){
+		
+	}
+	
+	EngineeringStudent(Address address){
+		this.address = address;
+	}
+	
+	@override
+	public void studyForemployement() {
+		System.out.println(this.getAddress().getLocation());
+	}
+	
+	public void callAtBeginning() {
+		System.out.println("Instantiated...");
+	}
+	
+	public void destroy() {
+		System.out.println("Destroyed...");
+	}
+}

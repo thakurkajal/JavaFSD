@@ -1,0 +1,14 @@
+package com.kajal.banking.connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DatabaseConnection {
+	public Connection getConnection() throws ClassNotFoundException, SQLException{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:xe","system","tiger");
+			return con;
+			
+		}
+	}

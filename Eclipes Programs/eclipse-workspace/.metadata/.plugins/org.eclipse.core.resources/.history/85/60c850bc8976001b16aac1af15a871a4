@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN 2.0//EN"
+				"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+				
+<beans>
+	<!--	<bean class="com.ibm.springdemo.Student" id="student"> 
+		
+			 <property name="stdName" value="Kajal"> </property>
+			<property name="stdId" value="101"> </property> 
+			
+			<constructor-arg value="Muskaan"> </constructor-arg>
+			<constructor-arg value="102"> </constructor-arg>
+			<constructor-arg value="Science"> </constructor-arg>
+			 <constructor-arg ref="address"> </constructor-arg>	
+			
+			</bean>		-->	
+		
+		<bean class="com.ibm.springdemo.Address" id="address"> 
+		
+			<constructor-arg value="Pune"> </constructor-arg>
+		</bean>
+		
+		<bean class="com.ibm.springdemo.Address" id="secondAddress"> 
+		
+			 <constructor-arg value="Nagpur"> </constructor-arg>
+		</bean>
+		
+		<bean  init-method="callAtBeginning" destroy-method="callAtEnd" class=com.ibm.springdemo.EngineeringStudent" id="engineeringStudent" autowire="byName">
+		</bean>
+		
+</beans>

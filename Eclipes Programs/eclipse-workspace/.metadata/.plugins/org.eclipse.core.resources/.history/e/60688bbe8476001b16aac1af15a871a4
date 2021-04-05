@@ -1,0 +1,12 @@
+package com.ibm.springdemo;
+
+public class Address {
+	private String location;
+	
+	Address(String location) {
+		this.location = location;
+	}
+	
+	
+
+}

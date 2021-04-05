@@ -1,0 +1,20 @@
+package com.ibm.kajal.training;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+//    	        Load the Context
+    	    	ClassPathXmlApplicationContext theContext = new ClassPathXmlApplicationContext("appContext.xml");
+    	    	
+//    	    	Get the bean reference
+    	    	DataDao dao = theContext.getBean("hello", DataDao.class);
+    	    	
+//    	    	Call the method on bean
+    	    	dao.connectToDb();
+    	    	System.out.println("Number of Employees currently registered :" + dao.getCountOfEmployees());
+    
+    }
+}

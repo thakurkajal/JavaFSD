@@ -1,0 +1,9 @@
+package com.ibm.kajal.bean.service;
+
+public class DepositMoney {
+	
+	public void depositCustomerMoney(String mobileNumber, int depositAmount) {
+				
+	}
+
+}

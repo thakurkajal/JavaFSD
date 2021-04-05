@@ -1,0 +1,192 @@
+package com.ibm.kajal.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.springframework.stereotype.Component;
+
+import com.ibm.bean.Bank;
+
+@Component("dao")
+public class DAOClass implements DAOInterface {
+	Connection con;
+	String queryToExecute;
+	PreparedStatement thePreparedStatement;
+	Statement theStatement;
+	ResultSet theResultSet;
+	
+	
+	public DAOClass(){
+		String userPassword="";
+		String urlToConnect="jdbc:mysql://localhost:3306/xyzbank";
+		String userName="root";
+		
+    	try {
+    		Class.forName("com.mysql.cj.jdbc.Driver");
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("Not loaded the Driver..." + e.getMessage());
+		}       
+    	
+    	 
+        try {        	
+			//Connecting to database
+        	con = DriverManager.getConnection(urlToConnect, userName, userPassword);
+			System.out.println("Connected to Bank database...");
+		} catch (SQLException e) {
+			System.out.println("Not Connected to Bank database..." + e.getMessage());
+		}
+        
+	}
+	
+	@Override
+	public boolean createAccount(Bank bank) {
+		queryToExecute = "insert into bank(number, name) values (?,?)";
+		try {
+//        	Get a reference to the PreparedStatement object
+			preparedStatement = dbCon.prepareStatement(queryToExecute);
+
+//			Replace the values for ?
+			preparedStatement.setString(1, bank.getNumber());
+			preparedStatement.setString(2, bank.getName());
+
+//			Execute the query
+			return preparedStatement.executeUpdate() > 0;
+
+		} catch (SQLException e) {
+			System.out.println("Can't get the PreparedStatement object : " + e.getMessage());
+		}
+		return false;
+	}
+
+	@Override
+	public boolean displayLowBalance(Bank bank) {
+		queryToExecute = "select * from bank";
+		try {
+//        	Get a reference to the PreparedStatement object
+			preparedStatement = dbCon.prepareStatement(queryToExecute);
+			ResultSet resultSet = preparedStatement.executeQuery(queryToExecute);
+			while (resultSet.next()) {
+				if (resultSet.getString("Number").trim().equals(bank.getNumber().trim()) || (resultSet.getInt("Bank ID")==bank.getBankID())) {
+					if (resultSet.getInt("Balance") <= 100)
+						return true;
+					else
+						return false;
+				}
+			}
+
+		} catch (SQLException e) {
+			System.out.println("Can't get the PreparedStatement object : " + e.getMessage());
+		}
+		return false;
+	}
+
+	@Override
+	public boolean deposit(Bank bank) {
+		queryToExecute = "select * from bank";
+		try {
+//        	Get a reference to the PreparedStatement object
+			preparedStatement = dbCon.prepareStatement(queryToExecute, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			ResultSet resultSet = preparedStatement.executeQuery(queryToExecute);
+			while (resultSet.next()) {
+				System.out.println(resultSet.getString(1));
+				if (resultSet.getString("Number").trim().equals(bank.getNumber().trim())) {
+					bank.setBalance((resultSet.getInt(4) + bank.getDepositAmount()));
+					resultSet.updateInt(4, bank.getBalance());
+					resultSet.updateString(5, resultSet.getString(5)+" , Amount Deposited : Rs."+bank.getDepositAmount()+", New Balance: Rs." +bank.getBalance()+"|");
+					resultSet.updateRow();
+			
+					return true;
+			}
+			}
+		} catch (SQLException e) {
+			System.out.println("Can't get the PreparedStatement object : " + e.getMessage());
+		}
+		return false;
+	}
+
+	@Override
+	public boolean withdraw(Bank bank) {
+		queryToExecute = "select * from bank";
+		try {
+//        	Get a reference to the PreparedStatement object
+			preparedStatement = dbCon.prepareStatement(queryToExecute, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+		
+			ResultSet resultSet = preparedStatement.executeQuery(queryToExecute);
+			while (resultSet.next()) {
+				if (resultSet.getString("Number").trim().equals(bank.getNumber().trim()) ){
+				if((resultSet.getInt(4) - bank.getWithdrawAmount())>0) {
+					bank.setBalance((resultSet.getInt(4) - bank.getWithdrawAmount()));
+					resultSet.updateInt(4, bank.getBalance());
+					resultSet.updateString(5, resultSet.getString(5)+" , Amount Withdrawn : Rs."+bank.getWithdrawAmount()+", New Balance: Rs." +bank.getBalance()+"|");
+					resultSet.updateRow();
+					return true;
+				} else
+					System.out.println("Insufficient Balance");
+				}
+			}
+		} catch (SQLException e) {
+			System.out.println("Can't get the PreparedStatement object : " + e.getMessage());
+		}
+		return false;
+	}
+
+	@Override
+	public boolean moneyTransfer(Bank bank) {
+		boolean flag= false;
+		queryToExecute = "select * from bank";
+		try {
+//        	Get a reference to the PreparedStatement object
+			preparedStatement = dbCon.prepareStatement(queryToExecute, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			ResultSet resultSet = preparedStatement.executeQuery(queryToExecute);
+			while (resultSet.next()) {
+				if (resultSet.getString("Number").trim().equals(bank.getNumber().trim())) {
+					if((resultSet.getInt(4) - bank.getWithdrawAmount())>=0) {
+					bank.setBalance((resultSet.getInt(4) - bank.getWithdrawAmount()));
+					resultSet.updateInt(4, bank.getBalance());
+					resultSet.updateString(5, resultSet.getString(5)+" , Amount Withdrawn : Rs."+bank.getWithdrawAmount()+", New Balance: Rs." +bank.getBalance()+"|");
+					resultSet.updateRow();
+					flag= true;
+				
+				}
+			}
+			}
+				resultSet = preparedStatement.executeQuery(queryToExecute);
+				while(resultSet.next()) {
+					if (resultSet.getString("Number").trim().equals(bank.getTonumber().trim())&& flag) {
+						bank.setBalance((resultSet.getInt(4) + bank.getWithdrawAmount()));
+						resultSet.updateInt(4, bank.getBalance());
+						resultSet.updateString(5, resultSet.getString(5)+" , Amount Deposited : Rs."+bank.getWithdrawAmount()+", New Balance: Rs." +bank.getBalance()+"|");
+						resultSet.updateRow();
+						return flag;
+					}
+			}
+		}catch (SQLException e) {
+				System.out.println("Can't get the PreparedStatement object : " + e.getMessage());
+			}
+		return false;
+	}
+
+	@Override
+	public Bank printTransaction(Bank bank) {
+		queryToExecute = "select * from bank";
+		try {
+//        	Get a reference to the PreparedStatement object
+			preparedStatement = dbCon.prepareStatement(queryToExecute);
+			ResultSet resultSet = preparedStatement.executeQuery(queryToExecute);
+			while (resultSet.next()) {
+				if (resultSet.getString("Number").trim().equals(bank.getNumber().trim()) || (resultSet.getInt("Bank ID")==bank.getBankID())) {
+					bank.setTransactions(resultSet.getString(5));
+					return bank;
+				}
+			}
+			}catch (SQLException e) {
+				System.out.println("Can't get the PreparedStatement object : " + e.getMessage());
+			}
+		return bank;
+	}
+}

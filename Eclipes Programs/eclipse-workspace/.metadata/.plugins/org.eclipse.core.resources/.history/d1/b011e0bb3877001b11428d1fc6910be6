@@ -1,0 +1,5 @@
+package com.kajal.banking.wallet;
+
+public class WalletServiceInfo {
+
+}

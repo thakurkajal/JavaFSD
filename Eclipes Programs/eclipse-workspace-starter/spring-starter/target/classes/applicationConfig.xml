@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+		<bean class="com.ibm.kajal.spring_starter.Engineer" id="engineer">
+		
+		<property name="engName" value="Kajal"></property>
+			<property name="engId" value="26"></property> 
+			<property name="listOfAddress">
+				<list>
+					<ref bean="theAddress"/>
+			<!--		<ref bean="secondAddress"/> -->
+				</list>
+			</property>		
+			
+		</bean>
+		
+		<bean class="com.ibm.kajal.spring_starter.Address" id="theAddress">
+			<property name="location" value="Bangalore"></property>
+			<property name="pincode" value="560089"></property>
+		</bean>
+		
+<!--	<bean class="com.ibm.kajal.spring_starter.Address" id="secondAddress">
+			<property name="location" value="Bombay"></property>
+			<property name="pincode" value="123300"></property>
+		</bean>
+		
+		<bean class="com.ibm.kajal.spring_starter.Address" id="thirdAddress">
+			<property name="location" value="New Delhi, India"></property>
+			<property name="pincode" value="110087"></property>
+		</bean>  -->
+		
+		<bean class="com.ibm.kajal.spring_starter.SoftwareEngineer" id="softwareEngineer" autowire="byType"></bean>
+		<bean class="com.ibm.kajal.spring_starter.SystemEngineer" id="systemEngineer" autowire="byType"></bean>
+
+</beans>

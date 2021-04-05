@@ -1,0 +1,9 @@
+package com.ibm.kajal.bean.service;
+
+public class FubdTransfer {
+	
+	public void moneyTransfer(String mobileNumber) {
+		
+	}
+
+}

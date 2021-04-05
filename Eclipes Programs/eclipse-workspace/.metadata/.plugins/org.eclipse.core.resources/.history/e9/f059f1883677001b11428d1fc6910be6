@@ -1,0 +1,5 @@
+package com.kajal.banking.exeptionoccured;
+
+public class MobileNumberNotRegistered {
+
+}

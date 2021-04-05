@@ -1,0 +1,27 @@
+package com.ibm.eis.ui;
+
+import java.util.Scanner;
+
+
+import com.ibm.eis.bean.Employee;
+import com.ibm.eis.service.EmployeeService;
+import com.ibm.eis.service.EmployeeServiceInterface;
+
+public class Main {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	EmployeeServiceInterface service = new EmployeeService();
+
+	 int empId = scan.nextInt();
+	 
+	 String empName = scan.nextLine();
+	 String empDesignation = scan.nextLine();
+	 int empSalary = scan.nextInt();
+	 String empInsuranceScheme = scan.nextLine();
+	 
+	 Employee employee = new Employee();
+	 
+	 
+
+}

@@ -1,0 +1,9 @@
+package com.ibm.kajal.service;
+
+public class CheckBalance {
+	
+	public void balanceInfo(String mobileNumber) {
+	
+	}
+
+}

@@ -1,0 +1,63 @@
+package com.ibm.kajal.training;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;;
+
+public class App 
+{
+    public static void main( String[] args ){
+    	
+//      Load the Context
+    	ClassPathXmlApplicationContext theContext = new ClassPathXmlApplicationContext("appContext.xml");
+    	    	
+//    	Get the bean reference
+    	DataDao dao = theContext.getBean("dataDao", DataDao.class);
+    	    	
+//    	Call the method on bean
+    	//dao.connectToDb();
+    	//System.out.println("Number of Employees currently registered :" + dao.getCountOfEmployees());
+    	
+    	Scanner scan = new Scanner(System.in);
+    	//System.out.println("Enter the employee id: ");
+    	//int empId = scan.nextInt();
+    	//scan.nextLine();
+    	
+    	//Employee emp = dao.getAllDetailsOfEmployee(empId);  
+    	//System.out.println(emp);
+    	
+    	//List<Employee> listOfEmployee = dao.getAllEmployees();
+    	
+    	//listOfEmployee.forEach(System.out::println);
+    	
+    	System.out.println("Please enter the operation you wnat to perform...");
+    	
+    	System.out.println("1.Add New Employee 2.Update Employee Details 3.Delete Employee Details");
+    	int option = scan.nextInt();
+    	switch(option) {
+    	case 1: System.out.println("Enter the new employee Id, name and address: ");
+    	
+    			int empId = scan.nextInt();
+    			scan.nextLine();
+    			String empName = scan.nextLine();
+    			String empAddress = scan.nextLine();
+    			dao.addEmployee(new Employee(empId, empName, empAddress)); 
+    			System.out.println("New employee details added");
+    			break;
+    		
+    	case 2: System.out.println("Enter the Id of an employee whose details you want to update: ");
+    			int employeeId = scan.nextInt();
+    			dao.updateEmployeeDetails(new Employee(employeeId));
+    			break;
+    		
+    	case 3: System.out.println("Enter the Id of an employee whose details you want to delete: ");
+				dao.deleteEmployeeDetails();
+				break;
+				
+		default: System.out.println("Enter the valid operation number among 1 to 3 for which you want to perform an operation...");
+		break;
+    	}
+    	
+    }
+}

@@ -1,0 +1,42 @@
+package com.ibm.kajal.service;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CreateAccount {
+	
+	Connection con;
+	String queryToExecute;
+	PreparedStatement thePreparedStatement;
+	Statement theStatement;
+	ResultSet theResultSet;
+	
+	
+	
+	public void createCustomerAccount(String customerName, String mobileNumber, int accountBalance) {
+		
+		queryToExecute = "insert into bank(customerName, mobileNumber, accountBalance) values(?,?, ?)";
+		
+		try {
+			thePreparedStatement = con.prepareStatement(queryToExecute);
+			
+			//Replace the ? to value
+			thePreparedStatement.setString(1, customerName);
+			thePreparedStatement.setString(2, mobileNumber);
+			thePreparedStatement.setInt(3, accountBalance);
+			
+			//Execute the query
+			if(thePreparedStatement.executeUpdate()>0)
+				System.out.println("New Customer Details Added Successfully...");
+			else
+				System.out.println("Insertion operation is Unsuccessfull...");
+		} catch (SQLException e) {
+			System.out.println("problem while executing the theStatement..." + e.getMessage());
+		}
+		
+		System.out.println("Customer account created");
+	}
+}

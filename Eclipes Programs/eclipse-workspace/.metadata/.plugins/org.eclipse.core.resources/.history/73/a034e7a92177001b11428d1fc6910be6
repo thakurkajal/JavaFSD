@@ -1,0 +1,9 @@
+package com.ibm.kajal.bankproject;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello and Welcome to Kajal Bank!" );
+    }
+}

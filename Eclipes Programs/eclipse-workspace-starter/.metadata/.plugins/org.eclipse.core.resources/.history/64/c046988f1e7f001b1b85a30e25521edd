@@ -1,0 +1,25 @@
+package com.ibm.eis.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.ibm.eis.bean.Employee;
+
+public class EmployeeService implements EmployeeServiceInterface{
+	
+	private Map<Integer, Employee> employee = new HashMap<Integer, Employee>();
+
+	@Override
+	public Map<Integer, Employee> setEmployeeDetails(int empId, String empName, int empSalary, String empDesignation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void displayEmployeeDetails() {
+		
+		
+	}	
+	
+
+}

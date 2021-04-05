@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\KajalThakur\Desktop\bankAssignment"/>
+			<item value="C:\Users\KajalThakur\Desktop\Eclipse Project Files"/>
+			<item value="C:\Users\KajalThakur\Downloads\spring-starter-pro\spring-starter-pro\src"/>
+			<item value="C:\Users\KajalThakur\Downloads\spring-annotations-work\spring-annotations-work\src"/>
+			<item value="C:\Users\KajalThakur\Downloads\spring-annotations-work\spring-annotations-work\src\main\resources"/>
+			<item value="C:\Users\KajalThakur\Downloads\spring-annotations-work\spring-annotations-work\src\main\java\com\waleed\ibm\training"/>
+			<item value="C:\Users\KajalThakur\Downloads\spring-annotations-work"/>
+		</list>
+	</section>
+</section>

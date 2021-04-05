@@ -1,0 +1,40 @@
+package com.ibm.kajal.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DAOClass {
+	Connection con;
+	String queryToExecute;
+	PreparedStatement thePreparedStatement;
+	Statement theStatement;
+	ResultSet theResultSet;
+	
+	
+	public DAOClass(){
+		String userPassword="";
+		String urlToConnect="jdbc:mysql://localhost:3306/xyzbank";
+		String userName="root";
+		
+    	try {
+    		Class.forName("com.mysql.cj.jdbc.Driver");
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("Not loaded the Driver..." + e.getMessage());
+		}       
+    	
+    	 
+        try {        	
+			//Connecting to database
+        	con = DriverManager.getConnection(urlToConnect, userName, userPassword);
+			System.out.println("Connected to Bank database...");
+		} catch (SQLException e) {
+			System.out.println("Not Connected to Bank database..." + e.getMessage());
+		}
+        
+	}
+}

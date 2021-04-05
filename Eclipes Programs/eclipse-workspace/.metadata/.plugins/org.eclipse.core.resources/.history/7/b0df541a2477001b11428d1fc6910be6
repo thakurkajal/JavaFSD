@@ -1,0 +1,8 @@
+package com.ibm.kajal.bankproject.user;
+
+public interface userAccount {
+	public static final String userName = "";
+	public static final int accountNumber;
+	public static final int mobileNumber;
+
+}

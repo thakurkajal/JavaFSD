@@ -1,0 +1,5 @@
+package com.ibm.kajal.bean.dao;
+
+public interface DAOInterface {
+
+}

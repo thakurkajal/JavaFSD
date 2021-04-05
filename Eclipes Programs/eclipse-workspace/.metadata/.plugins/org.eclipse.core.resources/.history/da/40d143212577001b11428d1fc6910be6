@@ -1,0 +1,17 @@
+package com.ibm.kajal.bankproject;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+//import com.ibm.springdemo.EngineeringStudent;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	 ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appConfig.xml");
+         
+         //UserAccountInfo student = context.getBean("userAccountInfo", UserAccountInfo.class);
+         
+         //student.studyForEmployement();
+    }
+}

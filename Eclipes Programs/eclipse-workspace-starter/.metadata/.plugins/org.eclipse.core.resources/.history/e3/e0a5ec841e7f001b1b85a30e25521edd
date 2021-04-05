@@ -1,0 +1,12 @@
+package com.ibm.eis.service;
+
+import java.util.Map;
+
+import com.ibm.eis.bean.Employee;
+
+public interface EmployeeServiceInterface {
+	Map<Integer, Employee> setEmployeeDetails(int empId, String empName, int empSalary, String empDesignation);
+	
+	void displayEmployeeDetails();
+
+}

@@ -1,0 +1,74 @@
+package com.ibm.kajal.ui;
+
+import java.util.Scanner;
+
+import com.ibm.kajal.service.CheckBalance;
+import com.ibm.kajal.service.CreateAccount;
+import com.ibm.kajal.service.DepositMoney;
+import com.ibm.kajal.service.PrintTransaction;
+import com.ibm.kajal.service.WithdrawMoney;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Do you want to perform the operation in bank...Y or N");
+		String optionToPerform = scan.nextLine();
+		int mobileNumber;
+		
+		
+		System.out.println("Enter the option you want to perform...");
+		System.out.println("1.Create Account 2.Deposit 3.Withdraw 4.Fund Transfer 5.Print Transaction 6.Check Balance");
+		int choice = scan.nextInt();
+		do {
+		switch(choice) {
+		case 1: //create account
+				System.out.println("Enter the customer name whose account you want to create in a bank");
+				String customerName = scan.nextLine();
+				CreateAccount account = new CreateAccount();
+				scan.nextLine();
+				System.out.println("Enter the customer mobile number to add into account:");
+				mobileNumber = scan.nextInt();
+				account.createCustomerAccount(customerName, mobileNumber);
+				break;
+				
+		case 2: //deposit money
+				System.out.println("Enter the mobile number of the customer for which you want to add money");
+				mobileNumber = scan.nextInt();
+				System.out.println("Enter the amount you want to deposit");
+				int depositAmount = scan.nextInt();
+				DepositMoney deposits = new DepositMoney();
+				deposits.depositCustomerMoney(mobileNumber, depositAmount);
+				break;
+			
+		case 3: //withdraw money
+				System.out.println("Enter the mobile number of the customer for which you want to withdraw money");
+				mobileNumber = scan.nextInt();
+				System.out.println("Enter the amount you want to deposit");
+				int withdrawAmount = scan.nextInt();
+				WithdrawMoney withdraw = new WithdrawMoney();
+				withdraw.withdrawCustomerMoney(mobileNumber, withdrawAmount);
+				break;
+			
+		case 4: //fund transfer
+				
+				break;
+			
+		case 5: //print transaction
+				System.out.println("Enter the mobile number of the customer whose account transactions you wanted to print");
+				mobileNumber = scan.nextInt();
+				PrintTransaction print = new PrintTransaction();
+				print.printtransactionOfCustomer(mobileNumber);
+				break;
+			
+		case 6: //check balance
+				System.out.println("Enter the mobile number of the customer whose account balance you want to check");
+				mobileNumber = scan.nextInt();
+				CheckBalance balance = new CheckBalance();
+				balance.balanceInfo(mobileNumber);
+				break;
+				
+		default: System.out.println(" Invalid option...Please enter the option from 1 to 6.");
+		}
+		}while(optionToPerform == "Y" || "N");
+	}
+}

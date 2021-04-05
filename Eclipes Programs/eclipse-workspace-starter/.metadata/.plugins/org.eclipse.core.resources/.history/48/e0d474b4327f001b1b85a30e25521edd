@@ -1,0 +1,7 @@
+package com.ibm.kajal.service;
+
+public class CreateAccount {
+		public void createCustomerAccount(String customerName, int mobileNumber) {
+			
+		}
+}

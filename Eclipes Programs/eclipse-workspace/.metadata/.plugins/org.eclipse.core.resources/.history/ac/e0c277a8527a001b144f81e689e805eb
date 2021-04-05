@@ -1,0 +1,27 @@
+package com.ibm.kajal.training;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Component;
+
+@Component
+public class NamedParamDemo {
+	NamedParameterJdbcTemplate namedParamTemplate;
+	
+	@Autowired
+	public void setTheDataSource(DataSource theDataSource) {
+		namedParamTemplate = new NamedParameterJdbcTemplate(theDataSource);
+	}
+	
+	String getEmployeeDetailsByEmployeeId(int employeeId) {
+		String queryToExecute = "select * from emp where empId = :empId";
+		
+		SqlParameterSource paramSource = new MapSqlParameterSource("empId", employeeId);
+		
+		return namedParamTemplate.queryForObject(queryToExecute, paramSource, String.class);
+	}
+}

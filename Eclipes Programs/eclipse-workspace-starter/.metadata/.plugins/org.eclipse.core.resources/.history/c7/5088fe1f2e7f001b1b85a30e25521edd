@@ -1,0 +1,9 @@
+package com.ibm.kajal.service;
+
+public class DepositMoney {
+	
+	void depositCustomerMoney(int mobileNumber) {
+		
+	}
+
+}

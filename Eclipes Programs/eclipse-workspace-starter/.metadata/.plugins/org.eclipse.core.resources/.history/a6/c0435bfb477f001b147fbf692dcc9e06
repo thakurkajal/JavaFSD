@@ -1,0 +1,7 @@
+package com.ibm.kajal.bean.service;
+
+public class PrintTransaction {
+		public void printtransactionOfCustomer(String mobileNumber) {
+			
+		}
+}

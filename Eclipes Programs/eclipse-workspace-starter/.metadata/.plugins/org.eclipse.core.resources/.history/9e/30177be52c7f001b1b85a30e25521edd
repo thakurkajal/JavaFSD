@@ -1,0 +1,33 @@
+package com.ibm.kajal.ui;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter the option you want to perform...");
+		System.out.println("1.Create Account 2.Deposit 3.Withdraw 4.Fund Transfer 5.Print Transaction 6.Check Balance");
+		int choice = scan.nextInt();
+		
+		switch(choice) {
+		case 1: //create account
+				break;
+				
+		case 2: //deposit money
+				break;
+			
+		case 3: //withdraw money
+				break;
+			
+		case 4: //fund transfer
+				break;
+			
+		case 5: //print transaction
+				break;
+			
+		case 6: //check balance
+				break;
+		}
+	}
+}

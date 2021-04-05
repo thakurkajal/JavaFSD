@@ -1,0 +1,39 @@
+package com.ibm.kajal;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	private String customerName;
+    	
+    	private int mobileNumber;
+    	
+    	private int accountBalance;
+    	
+    	
+
+    	public String getCustomerName() {
+    		return customerName;
+    	}
+
+    	public void setCustomerName(String customerName) {
+    		this.customerName = customerName;
+    	}
+
+    	public int getMobileNumber() {
+    		return mobileNumber;
+    	}
+
+    	public void setMobileNumberr(int mobileNumber) {
+    		this.mobileNumber = mobileNumber;
+    	}
+
+    	public int getAccountBalance() {
+    		return accountBalance;
+    	}
+
+    	public void setAccountBalance(int accountBalance) {
+    		this.accountBalance = accountBalance;
+    	}
+    }
+}

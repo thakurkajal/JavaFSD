@@ -1,0 +1,5 @@
+package com.kajal.banking.connection;
+
+public class DatabaseConnection {
+
+}

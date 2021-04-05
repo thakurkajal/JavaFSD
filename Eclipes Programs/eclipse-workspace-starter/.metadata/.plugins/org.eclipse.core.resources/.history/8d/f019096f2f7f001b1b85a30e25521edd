@@ -1,0 +1,60 @@
+package com.ibm.kajal.ui;
+
+import java.util.Scanner;
+
+import com.ibm.kajal.service.CreateAccount;
+import com.ibm.kajal.service.DepositMoney;
+import com.ibm.kajal.service.WithdrawMoney;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String customerName;
+		int mobileNumber;
+		int accountBalance;
+		CreateAccount account = new CreateAccount();
+		
+		System.out.println("Enter the option you want to perform...");
+		System.out.println("1.Create Account 2.Deposit 3.Withdraw 4.Fund Transfer 5.Print Transaction 6.Check Balance");
+		int choice = scan.nextInt();
+		
+		switch(choice) {
+		case 1: //create account
+				System.out.println("Enter the customer name whose account you want to create in a bank");
+				customerName = scan.nextLine();
+				account.setCustomerName(customerName);
+				
+				System.out.println("Enter the customer mobile number to add into account:");
+				mobileNumber = scan.nextInt();
+				account.setMobileNumberr(mobileNumber);
+				break;
+				
+		case 2: //deposit money
+				System.out.println("Enter the mobile number of the customer for which you want to add money");
+				mobileNumber = scan.nextInt();
+				System.out.println("Enter the amount you want to deposit");
+				int depositAmount = scan.nextInt();
+				DepositMoney deposits = new DepositMoney();
+				deposits.depositCustomerMoney(mobileNumber, depositAmount);
+				break;
+			
+		case 3: //withdraw money
+				System.out.println("Enter the mobile number of the customer for which you want to withdraw money");
+				mobileNumber = scan.nextInt();
+				System.out.println("Enter the amount you want to deposit");
+				int withdrawAmount = scan.nextInt();
+				WithdrawMoney withdraw = new WithdrawMoney();
+				withdraw.withdrawCustomerMoney(mobileNumber, withdrawAmount);
+				break;
+			
+		case 4: //fund transfer
+				break;
+			
+		case 5: //print transaction
+				break;
+			
+		case 6: //check balance
+				break;
+		}
+	}
+}
