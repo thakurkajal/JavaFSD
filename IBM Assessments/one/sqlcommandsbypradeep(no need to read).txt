@@ -1,0 +1,47 @@
+// BETTER USE ALL IN CAPS //
+
+CREATE TABLE  ibm_users (
+  id      NUMBER(10)    NOT NULL,
+  name   VARCHAR2(100) NOT NULL,
+  email   VARCHAR2(100) NOT NULL,
+  password   VARCHAR2(30) NOT NULL
+
+);
+
+
+
+ALTER TABLE ibm_users
+  ADD (
+    CONSTRAINT emp_pk PRIMARY KEY (id)
+  );
+
+
+  
+  CREATE SEQUENCE IBM_users_sequence;
+
+
+  CREATE OR REPLACE TRIGGER users_on_insert
+  BEFORE INSERT ON IBM_USERS
+  FOR EACH ROW
+BEGIN
+  SELECT IBM_users_sequence.nextval
+  INTO :new.id
+  FROM dual;
+END;
+/
+
+
+//IF ERROR COMES
+DROP TRIGGER IBM_USERS_ON_INSERT;
+(YOU GET MESSAGE TRIGGER DROPPED)
+
+(CREATE AGAIN)
+CREATE OR REPLACE TRIGGER IBM_users_on_insert
+  BEFORE INSERT ON IBM_USERS
+  FOR EACH ROW
+BEGIN
+  SELECT IBM_users_sequence.nextval
+  INTO :new.id
+  FROM dual;
+END;
+

@@ -1,0 +1,204 @@
+autoboxing/unboxing in java 1.5 example
+
+Name the package that contains classes that help in
+
+- connecting to a database:   java.sql.Connection
+
+- processing servlets : 
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+- Threads etc: java.lang.*
+
+
+- what is deleteRow() on Resultset object do 
+answer: deletes row for particular primary key
+
+- What does Type4 Driver in JDBC do
+answer- pure java platform independent driver
+
+- Which type of Statement can execute parameterized queries .
+answer- prepared statement
+
+- What is the result of expression 9.45 + "8,2"? 
+answer-9.4582
+
+- Which symbol separates multiple attributes in GET  method? ( HTTP GET Method) 
+answer-&
+
+- What are the methods in HttpServletRequest and  HttpServletResponse 
+Answer-do get head post options pt trace delete lastmodified  etc..
+
+
+
+- How can i get the month number using the Calendar class ?
+
+answer- int month=getCalendar().getCalendar(MONTH);
+
+- In Multiple try catch block , how can the super class exception is caught
+So it is a rule in Java, if multiple catch blocks exist, the first catch block should have subclass 
+exception and the next catch block should have its super class exception and the so on.
+
+
+- Various Collections  - how are the objects returned (is it in same order or not ) 
+hashmap,hashset-no order
+treemap-order asc
+linked list in order it came
+
+- What are the methods available on Statement  and Connection - what purpose each serve
+
+What will be the output of this  -
+
+1) 	String river = new String("TRAINING");
+	System.out.println(river.length());
+answer-8
+2)
+***************************************
+
+	String getValue(String word)
+	{
+	if (word.length() == 1)
+		return "";
+	else
+	return getValue( word.substring(0, word.length() - 1) ) + word.charAt(word.length() - 1);
+	}
+
+What is the value of the string returned by getValue("DEMOS")
+***************************************
+
+3) 
+public class Question {
+
+public static void main(String args[]) {
+	String s1 = "uvw";
+	String s2 = "xyz";
+	String s3 = s1.concat(s2.toUpperCase( ) );
+	System.out.println(s1+s2+s3);
+	} 
+}
+answer: uvwxyzuvwXYZ
+
+
+*******************************************
+
+4)
+	int a = 9;
+	int b = 14;
+	while(a<b) {
+		System.out.println("In the loop");
+		a+=2;
+		b-=2;	
+	}
+answer- In the loop
+In the loop
+
+
+
+5)	 abstract class xyz
+	{
+		abstract  abc (int a, int b) { }
+	}
+
+	- What sort of compilation error you will get ? 
+
+	- How to fix the compilation error
+Answer-- give return type void. and remove empty parenthesys.
+
+6) 
+	interface ATOB {
+		String s = "yo";
+		public void meth();
+	 }
+
+	interface BTOC { }
+
+	interface C extends ATOB, BTOC {
+		public void meth();
+		public void meth(int x);
+	 }
+
+	- Will this compile ?
+
+answer--- interface can also be extended (when inheriting from two interfaces.)
+
+
+7)	int i  = -1;
+	int b = 10;
+	int val =  b/ i;
+answer- -10
+
+
+8)	 interface Data { public void load(); }
+	 abstract class Info { public abstract void load(); }
+
+How Can i inherit both the interface and abstract class ?
+
+answer= class xyz extends Info implements interface{ void load}
+
+
+9) 
+
+public class GenericTest<G> {
+G g;
+GenericTest(G g){
+	this.g =g;
+}
+
+public static void main(String[] args)
+	{
+	GenericTest<String> arr[] = new GenericTest[5]; 		//line 1
+	arr[0] = new GenericTest("Java"); 			//line 2
+	arr[1] = new GenericTest(1);			 	//line 3
+	arr[2] = (GenericTest<String>)new GenericTest(1); 		//line 4
+	arr[3] = (GenericTest<String>)new GenericTest<Integer>(1);	 //line 5
+	for(GenericTest o:arr)
+   	  {
+		System.out.println(o);
+	   }
+	}
+}
+
+Answer-- can not cast <Integer> to <String> line5
+
+and default value is null in an array
+
+10 ) 
+
+	class A {
+		static String str = "STRING_IN_A";
+	}
+
+	class B extends A {
+		static String str = "STRING_IN_B";
+	}
+
+//
+in void main
+B b1=new B();
+sop b1.str
+
+//
+
+
+
+Answer--- will compile fine.bt str is being overwritten in B class.
+
+11) 
+
+int j=8;
+
+while( (j < 10) && (j > 24)) {
+	 System.out.println("  Am here");
+	}
+answer-while() condition is always false
+
+12) 
+	class output {
+	 public static void main(String args[]){
+		 StringBuffer c = new StringBuffer("Hello");
+		 StringBuffer c1 = new StringBuffer("World");
+		 c.append(c1);
+		 System.out.print(c);
+		}
+	 }
+answer-helloworld

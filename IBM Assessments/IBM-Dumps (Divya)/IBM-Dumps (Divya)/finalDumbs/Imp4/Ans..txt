@@ -1,0 +1,21 @@
+Q1.NONE OF THESE
+Q2.NONE OF THESE
+Q3.BEANFACTORY
+q3.True
+Q4.ApplicationContextConstructor
+Q5.<import resource="something.xml"/>
+Q6.ALL THE ABOVE
+Q7.All Answers
+Q8.COMPONENT AND OBJECT
+Q9.a,b,c
+Q10. a,b,c(if it is multi option or a)
+Q11. a,b,c,d
+Q12.all of the above are true
+Q13.a b c
+Q14.a c d
+Q15.a,b,c
+Q16.d
+Q17.all of the above
+Q18.Constructor based DI is invoing Setter each representing
+    a dependency Ans is D
+Q19.all of the above

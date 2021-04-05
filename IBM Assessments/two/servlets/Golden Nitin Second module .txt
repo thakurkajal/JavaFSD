@@ -1,0 +1,506 @@
+1.Which of the following is correct about junit? 
+
+Answer: - It is an open source framework. -
+          It provides Annotation to identify the test methods. - 
+          It provides Assertions for testing Expected results
+
+2. Pattern which follows sequential order?
+
+ Answer : Iterator
+
+3. The pattern involves a single class which is responsible 
+to create an object while making sure that only single object gets created?
+
+ Answer: Singleton
+
+4. Bluemix deploy cloud foundry 
+
+Answer: cf push
+
+5.How to access the resultsetobject? 
+
+Answer : by using special getter method…..
+
+6.RunWith(Suit.class)
+    @SuiteClasses({
+   annotationTest.class,
+   AssertTest.class
+   CalculateTest.class,
+    EmployeeTest.class})
+Public class SuiteTest{
+//the class remains empty
+//used only as a holder for the above annotaition
+}
+What is the sequence of junit test ? 
+
+Answer : AnnotationTest, AsserTest, CalculateTest,EmployeeTest
+
+7.Public static void main(String args[])
+{
+List<string> List = new ArrayList<string>();
+//add string
+List.add(“cricket”);
+List.add(“football”);
+List.add(“hockey”);
+Iterator it = List.iterator();
+While(it.hasNext())
+{
+String s = it.next();
+}
+}
+Which pattern 
+
+Answer : Iterator
+
+8.<%@ taglib …………….%>
+<c:set var = “j” value = “4,3,2,1” />
+<c:foreach item = “${j}” var = “item” varstatus = “status”>
+<c:if test = “${status.first}”>
+<c:out value = “${status. Index}” default = “abc”/>
+</c:if>
+</c:foreach> 
+
+Answer: 1
+
+9.How to access the resultsetobject?
+
+ Answer : by using special getter method…..
+
+10.Java.util.enumeration is an example of which pattern? 
+
+Answer : Iterator
+
+11. Aggregation represent in UML?
+
+ Answer : hollow diamond on the collection side
+
+12. Composition represent in UML? 
+
+Answer : Filled diamond on the side of the collection
+
+13. Generalization represent in UML?
+
+ Answer : hollow triangle shape on the superclass end of the line
+
+14. Dependency represent in UML?
+ 
+
+Answer : dotted line followed by
+
+15. 1..* specify about relationship? 
+
+Answer : At least one instance
+
+16. 0..1 Specify about relationship?
+
+ Answer: Zero or one instance. The notation n..m indicate n to m instances.
+
+17. The relationship between the object and component parts in UML diagram are represented by ----------------. 
+
+Answer : Aggregation
+
+18.A user types on URL which method is called?
+
+ Anser : get Method
+
+19. The method getWriter return an object of type PrintWriter?
+
+ Answer: HttpServletResponse
+
+20. To send binary o/p? 
+
+Answer : getOutputStream
+
+21. Unit testing? 
+
+Answer : Single Entity
+
+22. When we use command design pattern
+
+ Answer. when history of requests is needed
+
+
+24. In use case diagram actor represents ____?
+
+Answer: An actor represents a role that an outsider takes on when interacting with the business system.
+For instance, an actor can be a customer, a business partner, a supplier, or another business system.
+
+25. Common mechanisms for session tracking
+Ans.User authorization
+   Hidden fields
+URL rewriting 
+      Cookies(answer)
+Session tracking API
+
+26.which listener is used to log the…
+Answer: ServletRequestListner
+
+27.when you want to know attribute has added removed or replaced?
+Answer: HttpSessionAttributeListner
+
+28. when you want to know how many users are there?
+Answer: HttpSessionListner
+
+29. listener is noticed initialized and destroyed?
+Answer: ServletContextListner
+
+30. Authentication mechanishm in deployment descriptor?
+Answer: login-config.
+
+31.in javabean reference id define?
+a. Classname
+b. Package 
+c. Instance(answer)
+d. None
+
+32.<c:forToken item = “first, second, third, last;” delims = “,” var = “current”>
+<c:out value = “${current}” /> =?
+
+Answer: beforelast
+
+33.Behavior of UML diagram? 
+Answer: a. usecase(answer)
+b. object
+c. profile
+
+34.Decouples in which design pattern?
+
+Answer: Bridge
+
+35. HttpServlet supports
+a. http
+b. https 
+c. both(answer)
+d. none
+
+36.A: unit testing is the testing of single entity
+B: unit testing is the process of checking the functionality of the application whether it is working as per requirements
+Options :
+ a. A is true(ans)
+b. B is true
+c. Both are true
+d. None of the above
+
+37.A resultset updateable?
+Answer: yes but only if you indicate a concurrency strategy when executing the statement and if the driver and database support this option.
+
+38. How can you start a database transaction in the database
+Answer: by setting the autocommit property of the connection to false & execute a statement in the database
+
+39. The object that does not contain the stored procedure itself but contains only a call to the store procedure?
+Answer: callableStatement
+
+40. To execute a stored procedure “total stack” in a database server which of the following code snipper is used?
+Answer: callablestatement clbstmnt = con.preparecall(“{call totoal stack}”);
+cs.executeQuery();
+
+41. Jsp pages have access to implicit objects that are exposed automatically one such object that is available is request that request object is an instance of which class?
+Answer: HttpServletRequest
+
+42.Which type of driver converts jdbc calls into the Network protocol used by the datamanagement system?
+Answer: Type 4
+
+43. UML behavior diagram?
+Answer: Attribute diagram
+
+44.The sendError method defined in the httpservlet class is equivalent to invoking the setstatus method with the following parameter. Select the one correct answer:
+Answer: SC_NOT_FOUND
+
+45.A user types the url http://www.javaprepare.com/scwd/index.html which http request gets generated select the one correct answer?
+Answer: GET Method
+
+46. Which listener class will close() method?
+Answer: windowlistner
+
+47.What get printed when the following JSTL code program is executed?
+<%@ taglib uri = http://java.sun.com/jsp/jstl/core prefix = “c” %>
+<c:forEach var = “item” begin =”0” end = “12” step =”3”>
+${item}
+</c:forEach>
+Answer: 0,3,6,9,12
+
+48.Which diagram in UML shows a complete or partial view of the structure of a modeled system at a specific time?
+a) Sequence Diagram
+b) Collaboration Diagram
+c) Class Diagram
+d) Object Diagram
+Answer: d
+
+49.Why beans are used in J2EE architecture in stead of writing all the code in JSPs ?
+Answer: (a) Allows separation of roles between web developers and application developers
+
+50.Which operator use to separate url and attribute?
+Answer : ?
+
+51. Which operator is used to separate parameters or attributes?
+Answer: &
+
+52.Which method is used to url rewriting?
+Answer doget method
+
+53. Delay show in usecase by “Slant line”
+Answer Slant line for delay
+
+54. (first,two,three,four;,five;) delimits(,)
+Answer: firsttwothreefour;five;
+
+55. Which packages contain the JDBC classes?
+(a) java.jdbc and javax.jdbc
+(b) java.jdbc and java.jdbc.sql 
+(c) java.sql and javax.sql   (ans)
+(d) java.rdb and javax.rdb
+
+56. Which type of driver provides JDBC access via one or more ODBC drivers? 
+(a) Type 1 driver  (ans)
+(b) Type 2 driver
+(c) Type 3 driver
+(d) Type 4 driver
+
+57. Which type of driver converts JDBC calls into the network protocol used by the database management system
+directly?
+(a) Type 1 driver
+(b) Type 2 driver
+(c) Type 3 driver
+(d) Type 4 driver  (ans)
+
+58. How can you retrieve information from a ResultSet?
+(a) By invoking the method get(..., String type) on the ResultSet, where type is the database type
+(b) By invoking the method get(..., Type type) on the ResultSet, where Type is an object which represents a database
+type
+(c) By invoking the method getValue(...), and cast the result to the desired Java type. 
+(d)(ANS) By invoking the special getter methods on the ResultSet: getString(...), getBoolean (...), getClob(...),...  //ANSWER
+
+59. How can you execute DML statements (i.e. insert, delete, update) in the database?
+(a) By making use of the InsertStatement, DeleteStatement or UpdateStatement classes 
+(b)(ANS) By invoking the execute(...) or executeUpdate(...) method of a normal Statement object or a sub-interface object  //ANSWER
+thereof
+(c) By invoking the executeInsert(...), executeDelete(...) or executeUpdate(...) methods of the
+DataModificationStatement object
+(d) By making use of the execute(...) statement of the DataModificationStatement object
+
+60. How do you know in your Java program that a SQL warning is generated as a result of executing a SQL statement in
+the database?
+(a) You must catch the checked SQLException which is thrown by the method which executes the statement
+(b) You must catch the unchecked SQLWarningException which is thrown by the method which executes the statement 
+(c) ANS: You must invoke the getWarnings() method on the Statement object (or a sub interface thereof)  //ANSWER
+
+61.What is, in terms of JDBC, a DataSource?
+(a) A DataSource is the basic service for managing a set of JDBC drivers
+(b) A DataSource is the Java representation of a physical data source
+(c) A DataSource is a registry point for JNDI-services 
+(d) (ANS): A DataSource is a factory of connections to a physical data source 
+
+61. What is the meaning of ResultSet.TYPE_SCROLL_INSENSITIVE
+(a) This means that the ResultSet is insensitive to scrolling
+(b) This means that the Resultset is sensitive to scrolling, but insensitive to updates, i.e. not updateable 
+(c)(ANS) This means that the ResultSet is sensitive to scrolling, but insensitive to changes made by others //ANSWER
+(d) The meaning depends on the type of data source, and the type and version of the driver you use with this data source
+
+62. Are ResultSets updateable?
+(a) Yes, but only if you call the method openCursor() on the ResultSet, and if the driver and database support this option 
+(b)(ANS) Yes, but only if you indicate a concurrency strategy when executing the statement, and if the driver and database support this option
+(c) Yes, but only if the ResultSet is an object of class UpdateableResultSet, and if the driver and database support thisoption
+(d) No, ResultSets are never updateable. You must explicitly execute DML statements (i.e. insert, delete and update) to change the data in the underlying database
+
+63. How can you start a database transaction in the database?
+(a) By asking a Transaction object to your Connection, and calling the method begin() on it
+(b) By asking a Transaction object to your Connection, and setting the autoCommit property of the Transaction to false
+(c) By calling the method beginTransaction() on the Connection object 
+(d)(ANS) By setting the autoCommit property of the Connection to false, and execute a statement in the database
+
+64. What is the meaning of the transaction isolation level TRANSACTION_REPEATABLE_READ
+(a) Dirty reads, non-repeatable reads and phantom reads can occur
+(b) Dirty reads are prevented; non-repeatable reads and phantom reads can occur (c)(ANS) Dirty reads and non-repeatable reads are prevented; phantom reads can occur
+(d) Dirty reads, non-repeatable reads and phantom reads are prevented
+
+
+65. What statements are correct about positioned updates (i.e. cursor updates) in ResultSets?
+ (2 correct answers)
+[a] Using the cursor technique is currently the only possible way to change the data in the current row of a ResultSet
+ [b](ANS) Insert statements are only supported when using scrollable cursors.
+[c] Only scrollable updateable ResultSets can use this approach to change the data in the current row of a ResultSet 
+[d](ans) The name of the cursor is specified by the setCursorName(String name) method the Statement object.
+
+66. How can you execute a stored procedure in the database? 
+(a)(ans) Call method execute() on a CallableStatement object
+(b) Call method executeProcedure() on a Statement object
+(c) Call method execute() on a StoredProcedure object
+(d) Call method run() on a ProcedureCommand object
+
+
+67. What happens if you call the method close() on a ResultSet object?
+(a) the method close() does not exist for a ResultSet. Only Connections can be closed. 
+
+(b)(ans) the database and JDBC resources are released
+(c) you will get a SQLException, because only Statement objects can close ResultSets
+(d) the ResultSet, together with the Statement which created it and the Connection from which the Statement was retrieved, will be closed and release all database and JDBC resources
+
+
+68. What happens if you call deleteRow() on a ResultSet object?
+(a) The row you are positioned on is deleted from the ResultSet, but not from the database. 
+(b)(ans) The row you are positioned on is deleted from the ResultSet and from the database
+(c) The result depends on whether the property synchronizeWithDataSource is set to true or false
+(d) You will get a compile error: the method does not exist because you can not delete rows from a ResultSet
+
+
+69. What statements are correct about batched insert and updates? 
+(2 answers)
+[a] To create a batch of insert and update statements, you create an object of type Batch, and call the method
+addStatement(String statement) for each statement you want to execute in the batch
+[b] Batch insert and updates are only possible when making use of parameterized queries. 
+[c] (ans)To do a batched update/insert, you call addBatch(String statement) on a Statement object for each statement you want to execute in the batch 
+[d](ans) To execute a batched update/insert, you call the executeBatch() method on a Statement object
+
+
+70. What is correct about DDL statements (create, grant,...)? 
+(a)(ans) DDL statements are treated as normal SQL statements, and are executed by calling the execute() method on a Statement (or a sub interface thereof) object
+(b) To execute DDL statements, you have to install additional support files
+(c) DDL statements can not be executed by making use of JDBC, you should use the native database tools for this.
+(d) Support for DDL statements will be a feature of a future release of JDBC
+
+
+71. The JDBC-ODBC Bridge supports multiple concurrent open statements per connection?
+a. True(ans)
+b. False
+
+
+72. Which of the following allows non repeatable read in JDBC Connection?
+a. TRANSACTION_READ_UNCOMMITTED
+b. TRANSACTION_READ_COMMITTED
+c. TRANSACTION_SERIALIZABLE 
+d. TRANSACTION_REPEATABLE_READ(ans)
+
+73. Which of the following statements is false as far as different type of statements is concern in JDBC?
+a. Regular Statement
+b. Prepared Statement
+c. Callable Statement 
+d. Interim Statement(ans)
+
+
+74. Which of the following methods are needed for loading a database driver in JDBC?
+a. registerDriver() method
+b. Class.forName() 
+c. Both A and B(ans)
+d. getConnection()
+
+
+75. Which of the following is false as far as type 4 driver is concern?
+a. Type 4 driver is “native protocol, pure java” driver
+b. Type 4 drivers are 100% Java compatible
+c. Type 4 drivers uses Socket class to connect to the database 
+d.(ans) Type 4 drivers can not be used with Netscape
+
+
+76. To execute a stored procedure “totalStock” in a database server, which of the following code snippet is used?
+a. Statement stmt = connection.createStatement();stmt.execute("totalStock()");
+b.(ans) CallableStatement clbstmnt = con.prepareCall("{call totalStock}");cs.executeQuery();
+c. StoreProcedureStatement stmt=connection.createStoreProcedure("totalStock()");spstmt.executeQuery();
+d. PrepareStatement pstmt = connection.prepareStatement("totalStock()");pstmt.execute();
+
+
+77. Which driver is efficient and always preferable for using JDBC applications?
+a. Type – 4(answer)
+b. Type – 1
+c. Type – 3
+d. Type – 2
+
+
+78. JDBC facilitates to store the java objects by using which of the methods of PreparedStatement
+setObject () 2. setBlob() 3. setClob()
+a. 1, 2 
+b. 1,2,3(answer)
+c. 1,3
+d. 2,3
+
+
+79. Which statement is static and synchronized in JDBC API?
+a. executeQuery()
+b. executeUpdate() 
+c. getConnection()(answer)
+d. prepareCall()
+
+
+80. The JDBC-ODBC bridge is
+a. Three tiered 
+b. Multithreaded(answer)
+c. Best for any platform
+d. All of the above
+
+
+81. All raw data types (including binary documents or images) should be read and uploaded to the database as an array of 
+a. byte(answer)
+b. int
+c. boolean
+d. char
+
+
+82. The class java.sql.Timestamp has its super class as
+a. java.sql.Time 
+b. java.util.Date(answer)
+c. java.util.Time
+d. None of the above
+
+
+83. BLOB, CLOB, ARRAY and REF type columns can be updated in
+a. JDBC 1.0
+b. JDBC 4.0
+c. JDBC 2.0 
+d. JDBC 3.0(answer)
+
+
+84. Which of the following methods finds the maximum number of connections that a specific driver can obtain?
+a. Database.getMaxConnections
+b. Connection.getMaxConnections
+c. DatabaseMetaData.getMaxConnections(ans)
+d. ResultSetMetaData.getMaxConnections
+
+
+85. Are prepared statements actually compiled? 
+a. Yes, they compiled(ans)
+b. No, they are bound by the JDBC driver
+
+
+86. When the message “No Suitable Driver” occurs?
+a. When the driver is not registered by Class.forname() method
+b. When the user name, password and the database does not match 
+c.(ans) When the JDBC database URL passed is not constructed properly
+d. When the type 4 driver is used
+
+
+87. Which driver is called as thin-driver in JDBC? 
+a. Type-4 driver(ans)
+b. Type-1 driver
+c. Type-3 driver
+d. Type-2 driver
+
+
+88. How many transaction isolation levels are defined in java.sql.Connection interface?
+a. 4
+b. 3 
+c. 5(ans)
+d. 2
+
+
+89. Which method is used to perform DML statements in JDBC?
+a. execute()
+b. executeQuery() 
+c. executeUpdate()(ans)
+d. executeResult()
+
+
+90. What is the disadvantage of Type-4 Native-Protocol Driver? 
+a.(ans) At client side, a separate driver is needed for each database.
+b. Type-4 driver is entirely written in Java
+c. The driver converts JDBC calls into vendor-specific database protocol
+d. It does not support to read MySQL
+
+
+91.URL from a remote location protocol http is use
+a)http
+b)https 
+c)both 
+d)none [Ans. c]
+
+
+
+important link:  http://www.objectsbydesign.com/projects/umltest/cfw-answers-1.html

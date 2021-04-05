@@ -1,0 +1,524 @@
+27/06/18
+Wednesday
+JavaScript is a dynamically Typed Language.
+Running javascript outside browser is through NodeJS.
+javascript engine there in chrome in v8(spider monkey).
+Functions in JavaScript:
+Funtion printOrder()
+{
+console.log('Printing Order' +orderId);
+};
+printOrder('9002');
+CallStack: ALll the functions will be loaded there.
+Functions can take parameters.
+One way of creating object in javascript is opening a brace and closing a brace
+New methods can be added once an object is created through
+"Aspect Oriented Programming","Dependency Injection".
+internet explorer version is i8.
+In javascript everything is by default an object
+Every object has a property called prototype.
+Execution of  nodescript11.js in Visual studio code
+C:\html5\HTML>node script11.js
+
+To check the version number:
+C:\html5\HTML>node -v
+Through function hoisting(Functions are moved upwards) program is executed.
+v8 engine generates bytecode and then the exection starts.
+There is no blockscoping in javascript.
+
+Trying with let the code doesnt work:
+printOrder('A1234');
+function printOrder(orderId) {
+    ordername="Order1";
+    console.log('Order Details ' + orderId);
+    for(let x=0;x<10;x++) {
+        var y=20;    }
+      console.log(x+y)  
+    
+}
+console.log(ordername);
+console.log(x+y)
+                  ^
+
+ReferenceError: x is not defined
+    at printOrder (C:\html5\HTML\script11.js:9:19)
+    at Object.<anonymous> (C:\html5\HTML\script11.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:702:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:713:10)
+    at Module.load (internal/modules/cjs/loader.js:612:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:551:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:543:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:744:10)
+    at startup (internal/bootstrap/node.js:240:19)
+  Trying with var:It starts working with the usage of var
+printOrder('A1234');
+function printOrder(orderId) {
+    ordername="Order1";
+    console.log('Order Details ' + orderId);
+    for(var x=0;x<10;x++) {
+        var y=20;
+    }
+      console.log(x+y)  
+    
+}
+console.log(ordername);
+C:\html5\HTML>node script11.js
+Order Details A1234
+30
+Order1
+
+C:\html5\HTML>
+If no value is passed default will be undefined.
+
+2.
+
+function calcTotalPrice(quantity,price,currency)
+{
+    console.log(currency);
+};
+calcTotalPrice(2,4.00);
+
+
+v10.5.0
+output:
+C:\html5\HTML>node script3.js
+undefined
+
+undefined+number=Nan
+
+3.
+function calcTotalPrice(quantity=5,price,currency)
+{
+    console.log('Total Price'+(quantity+price)+' '+currency);
+};
+calcTotalPrice(undefined,5,'RE',);
+OUTPUT:
+C:\html5\HTML>node script3.js
+Total Price10 RE
+4.
+var activateOrder = function() {
+    console.log("Order activated");
+};
+console.log(typeof activateOrder);
+OUTPUT:
+:\html5\HTML>node script4.js
+function
+
+Function declarations are hoisted
+But not functional expressions.
+CALL BACK FUNCTION;'
+A function passes parameter to another function.
+
+28/06/2018
+Thursday
+
+comparing names:
+let orders=[
+    {
+       id:1,
+       price:78899.5,
+       name:'xyz'
+    },
+    {
+         id:3,
+         price:28899.5,
+         name:'abcd'
+    },
+    {
+        id:4,
+        price:58899.0,
+        name:'efgh'
+    }
+]
+
+var sortedOrders=orders.sort(function(order1,order2) {
+    return order1.name.localeCompare(order2.name);
+})
+for(order in sortedOrders) {
+    console.log(sortedOrders[order].name)
+}
+sortedOrders.forEach(function(order) {
+    console.log(order.name)
+})
+
+C:\html5\HTML>node script13.js
+abcd
+efgh
+xyz
+abcd
+efgh
+xyz
+
+C:\html5\HTML>
+when u return a function it will remember the previously stored value.
+Also called as currying
+=== is used for type safe comparison.
+functions are used in 2 ways
+By creating a stand alone fuction.
+other is by Encapsulated function(as a blueprint for creating objects)
+LET is a BLOCKSCOPING.
+ superclass OBJECT
+'/'
+Employee
+'/'
+Manager
+Even in javascript we have classes
+This is called Ecma(European commputers manufacturing association)
+2015
+Within a class never declare a function.
+ASYNCHRONOUS CALL BACK:
+set timeout,set interval is a timer event,standard method available
+asynchronous call backs are executed after some delay.
+Key feature is functions are asynchrononus in javascript.
+
+Call Stack and event queue,call back stack
+my func will be added to call stack
+We have heap memory where objects and references are there
+settime is added in call stack
+set timout 
+Arrow functions are similar to lamda expressions in java.
+set timeout 
+setinterval is recursive call.
+DOM :
+Document object model
+BOM:Browser Object model
+Alert:it checks wether window is part of object or not
+Window.alert:default object of window ,both are same.
+Prompt :Prompt the user to give an input.
+the location object:
+it gives the url of current page being loaded.
+DoM basics:
+document.getElementByID gets access to id of an element.
+geteementsbyTagName:
+It returns all the elleemnts with classname.
+gives references of eleemnts with css class.
+Getting an attribute of an element:
+GetElementsByclassName: returns elements with classname,
+Jquery is used for DOM Manipulations and iterations.
+Jquery supports all the dom manipulations and iterations.
+CildNodesProperty gives access to all child elements.
+empty spaces constitute text node while creating an article id.
+
+QUERY SELECTORS: we can pass all css selectors.
+
+var element= document.queryselector('article1');
+console.log(element)
+If there are  many articles  use "querysSelectorAll".[new selectors given as a part of HTML5].
+if use a dot operator it is a class selector('.special);.
+Javascript is a event driven language:functions are executed based on events.
+USER INTERFACE EVENTS:
+load
+unload
+abort
+error
+select
+resize
+scroll
+
+Event  Bubbling:first reaches the target and goes upwards
+
+
+02/07/2018
+MONDAY:
+
+1.Typescript over javascript advantages : typescript is a statically typed language., we have typesecurity here.
+2.Angularjs framework is completely based on typescript so we need typescript
+3.Coffee script and dart framework of google.After transpiling the code the code can be executed on any browser.
+4.Typescript is very popular.
+5.typescript is superset of  js.
+We use restfull webservices.
+MVC is a seperation of logics.
+Y mvc on client side: To reduce the complexity of an application
+Angular JS 1.x had a lot of problems to deal with.
+Angular 2 is based on javascript.(complete rewrite of 1.x)
+Now we use angular js6(some bug fixes and enhancements are done here)
+Y do we use frameworks?
+Spring mvc implemntation and seperation is more easy  to use.
+Angular js is a js framework(clientside) for buildng client side applications using html,
+javascript and CSS.
+Y shud we trsnspile ND convert th typescript?
+Typescript+transpiler=javascript
+because browsers do not understand Typescript.
+1.Was there any modularity in typescript??
+ANs: Any reusable code is modular.
+Version of typescript learnt is 2.1.
+
+We have dao layer ,business layer and a db ,webAPI.
+We have controllers,model and view in angular js
+model comunicates with serverside using ajax calls
+we get back json data
+json data is passed by controller and will be diaplYED IN the browser.
+ANgular js gives modularity(it promotes easy maintainance and reusability).
+
+Spring mvc +spring core+Spring BOOT and then code will be deployed into cloud.
+
+We have another framework called MVVM(mODELtOvIEW AND vIEW toMODEL).
+How did we bind jsps in spring mvc: by adding model attribute within html tags.
+WHY ANGULAR?
+1.Expressive HTML: model is data ,binding data to jsp
+server side  we have jsps adding els and jstl here
+On client side ,we need some framework to bind the data and render the code(this is what it means to be expressive html)
+2.POWERFUL DATABINDING:
+for arraylist we use for each.
+and xml tags
+We also use components here(angular js helps in creation of components which are reusable).
+Instead of tiles herewe use an architechture called SINGLEPAGEAPPLICATIONS in short called as SPA.
+
+3.BUILDING BACKEND INTEGRATION:
+making an ajax call:Spring willl give data to the angular js.
+oBJECT used here is XMLHTTP REQUEST.,we use HTTPCLIENT OR HTTP HERE IN ANGULAR JS.
+iNITIATING A REQUEST WE USE OPEN METHOD
+parameters used boolean value etc
+we use callback method here
+better than xml http request we use PROMISE.
+4.MODULAR BY DESIGN
+NPM:NODE PACKAGE MANAGEMENT TOOL
+Angular js 1.x is very slow.
+ANgular js is build for modern devices
+Anglar native is used to design apps.
+Angular api is very simple.
+facebook has react js and amber etc 
+it follows the principle of write less do more.
+Angular js mainly deals with component creation.[Application=Component+component+component]
+Component is created by first forming a template(HTML+Data) and class and then metadata(Annotations, dependency injection)
+COMPONENT=TEMPLATE+CLASS+METADATA.
+
+2.ANGULAR MODULES:
+1.ROOT MODULE & 2.FEATURE ANGULAR MODULE
+a.An application should have always 1root module AND multiple sub modules.
+b.A rootmodule and a feature angular module may have many components altogether.
+
+SAMPLE APPLICATION ARCHITECTURE:
+1.Index.html
+COMPONENT:
+app.component.ts
+import { Component } from '@angular/core';  //importing
+@Component(Decorator which is similar to annotation)(Y was it put in curlybraces: A module can be anything) ({                                                        // Metadata & Template
+selector: 'pm-app' //metadata Decorators Using components we get reusability etc.
+TEMPLATE:
+
+<div><h1>{{ pageTitle}}</h1>
+<div>My First Component</div>
+</div>
+})
+
+export class AppComponent                        //CLASS
+{
+pageTitle:string ='Product Management' ;}
+ 
+We have name module and default module 1 shud be default
+COmponent should be always a name module
+for namemodule we use curlybraces.
+For default module no curlybraces are needed.
+bootstrap is where we define the entry point
+
+*ng for dom manipulations.
+CREATING THE COMPONENT CLASS: .TS FILE
+export class AppComponent //class name and componentname used in code.
+{
+pageTitle:string ='product'; //property name,datatype and value
+@Component is the metadata which are used as decorators here
+PURPOSE OF ANNOTATION: they are basically metadata.
+Metadata is processed by angularframework here in angular js.
+selector is reference to an element/component similar to bean id in mvc.
+Decorator is a function that adds metadata to a class, its members or its method arguments starting with @
+angular js provides built in decorators(@Component)
+we use an annotation call @Autowired in spring mvc.
+Even here The same @Autowired is used.
+pm-app is directive name in html
+PageTitle is about binding the data.
+PROVIDERS:xcomponnets have a dependencies on service.so those we represent in provider
+
+ANGULAR CLI(COMMAND LINE INTERFACE)
+:
+npm install -g @angular/cli :installation.
+CLI TAKES CARE OF ALL BUNDLING AND BUNDLED IN SINGLE JS FILE.(main.js)
+ng serve calls the build task .here first transpiling is done and then bundling happens.
+
+
+ng:angularcli in shortname.
+CREATING A NEW WORKSPACE IN VISUALSTUDIO:
+javascript>mkdir angularworkspace
+
+ng new my-app:creating new application
+
+mkdir angularworkspace
+cd angularworkspace:to c
+INSTALLING NEW ANGULAR CLI:
+npm install -g @angular/cli
+
+Generating and serving an Angular project via a development server Create and run a new project:
+
+ng new my-project
+cd my-project
+ng serve -o
+approot is mapped in app.module.ts
+installed angular cli
+new proj created
+ng serve starting the server 
+lcalhost:4200 by running the server
+entry is app module .ts
+decalre all the components
+according to the modules.
+browser module is used to render dom elleemnts
+
+bootstrap is the app component
+in ndex.html app root new is searched and html is loaded in app.component.html.
+selector shud start with app laways
+ MICROSOFT VISUAL STUDIO TERMINAL CODE:
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\angularworkspace>cd my-app
+
+C:\angularworkspace\my-app>ng serve -o
+Port 4200 is already in use. Use '--port' to specify a different port.
+
+STEPS REQUIRED;
+1.MAIN.TS
+app module.ts
+Initialized
+2.APP.MODULE.TS:
+eNTRYPOINT  bootstrap
+ eventsapp
+component we have html and css
+3.
+INDEX.HTML
+<APP-EVENTS-APP>
+NG SERVE -O
+it starts referring to main .ts app mosdule is intialized
+app module is loaded
+bootstrap is entrypoint which intlzs componnets
+script injection happens
+transfers and generates js code
+it generates main.js many js files generated.
+Step 1 involves TRANSPILING
+at runtimes it looks at tags .
+script injection happens in the browser modules
+main.js has link to app module then event componnt has link to index.html
+then this gets into the body of code
+npm installation is not needed again and again
+ ng g c name of component creates a component
+and links new component in app.ts
+create componnets and defining them is important.
+
+
+
+C:\angularworkspace\my-app>ng serve -o --port 8888
+** Angular Live Development Server is listening on localhost:8888, open your browser on http://localhost:8888/ **
+
+Date: 2018-07-02T11:29:02.159Z
+Hash: e8e3505bb172de5054c9
+Time: 16078ms
+chunk {main} main.js, main.js.map (main) 10.7 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 227 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 15.6 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 3.07 MB [initial] [rendered]
+i ?wdm?: Compiled successfully.
+Terminate batch job (Y/N)? y
+
+C:\angularworkspace\my-app>ng g c events-app
+CREATE src/app/events-app/events-app.component.html (29 bytes)
+CREATE src/app/events-app/events-app.component.spec.ts (650 bytes)
+CREATE src/app/events-app/events-app.component.ts (284 bytes)
+CREATE src/app/events-app/events-app.component.css (0 bytes)
+UPDATE src/app/app.module.ts (410 bytes)
+
+C:\angularworkspace\my-app>ng serve -o --port 8888
+** Angular Live Development Server is listening on localhost:8888, open your browser on http://localhost:8888/ **
+
+Date: 2018-07-02T11:30:35.128Z
+Hash: e7685129aa5993d51089
+Time: 13111ms
+chunk {main} main.js, main.js.map (main) 13.8 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 227 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 5.22 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 15.6 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 3.07 MB [initial] [rendered]
+i ?wdm?: Compiled successfully.
+
+Ngmodule is the decorator in app.module.ts
+we can bootstrap only 1 component.
+
+
+
+
+Though we write typescript after transpiling everything becomes function,Then y dont we use javascript directly??
+ANS:End to end application is built by js,for large scale applications without using functions is not enough,
+in es25 we use classes..application shud be easy to test,building a complex application only by js is tough.
+Further enhancements are always easy.
+Most of the packages and libraries these days are built by using typescript mostly.
+
+
+ADVANTAGE OF ANGULAR CLI:helps in adding libraries etc.
+package .js gets created
+package.json consists of dependencies,test scripts etc
+angular.json file is also created
+src folder is also created.
+App module is where u create @ngmodule
+we have declaratiionswith componnets imports(browsermodules),providers,bootstrap (Defining the entry point of components)
+we get first platform function initialize the components bootstrap
+in index we add reference of the root elemnt
+Here Script injection happens.
+
+
+DIRECTIVE:
+Custom html elements or attributes used to boost  up or extend the html
+There are two types of directives  namely:
+custom
+ built in 
+Angular built in directives:
+sTRUCTURAL DIRECTIVES:
+*NG 
+*NG FOR: for loop and foreach loop
+Component as a directive:
+app.module.ts
+@Ng module decorator imports along with delcrations,bootstrap(root module) and also exports.
+In app component.ts
+we have component selector,template,export class name.
+Component is a directive because components are inherited from directives.
+We have 1 way binding and 2 way binding
+DOm injection: here we inject the elemnts utilized by most of the frameworks.
+Property binding:
+<IMG [SRC]='PRODUCT.IMAGEURL'> IMAGE URL IS THE TEMPLATE EXPRESSION
+<IMG SRC={{PRODUCT.IMAGEURL}}>//SRC IS THE ELEEMNT PROPERTY
+ IN first case it is 1 way binding
+if a product img must be changed then 1 way binding is implemented wherever properties are changing theyre rendered immediately by
+propagating.
+button (click)='toggleImage()'>
+
+In two way binding we use input [(ngModel)]='listFilter'>{MVVM IS IMPLEMENTED HERE}
+MODEL TO VIEW,VIEW BACK TO MODEL THIS IS CALLED TWO WAY BINDING.
+If the value is changed in the textbox value is updated in the model and view altogether.
+
+MAJOR ADVANTAGE WITH DEPENDENCY INJECTION:
+
+angular js also provides injector
+ like math service,log service,svc etc
+Create a service class add metadata for services.
+Register the services globally or locally.
+Add a decorator call @Injectable into components or wherever there is a need
+Injecting into a component:
+Component is registered in ngmodule
+register a service in the ng module.
+Register locally or globally.
+app component has a dependency on product service.
+Registering a provider :use providers,import etc
+inside the constructor insert a property and inject it
+FOR...OF  VS FOR....IN:
+FOR OF: iterates over iterable objects
+c
+
+WHY DO WE NEED DEPENDENCY INJECTION HERE?
+ANS:
+if we instantiate manually we can access the data,
+product-list.component.service.ts
+producthttp has a dependency called httpCLient
+When we load product list component has product http service
+If v dont have dependencies the whole cycle starts again
+instead of that v make  use dependencies we resolve and inject the dependencies.
+
+06/07/2018
+FRIDAY:
+Data renderimg is much easier with angular js.

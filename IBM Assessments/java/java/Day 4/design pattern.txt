@@ -1,0 +1,217 @@
+
+tutorialspoint
+
+    Home
+    Tutorials Library
+    Coding Ground
+    Dev Tools
+
+Design Patterns Tutorial
+
+    Design Patterns Tutorial
+    Design Patterns - Home
+    Design Patterns - Overview
+    Design Patterns - Factory Pattern
+    Abstract Factory Pattern
+    Design Patterns - Singleton Pattern
+    Design Patterns - Builder Pattern
+    Design Patterns - Prototype Pattern
+    Design Patterns - Adapter Pattern
+    Design Patterns - Bridge Pattern
+    Design Patterns - Filter Pattern
+    Design Patterns - Composite Pattern
+    Design Patterns - Decorator Pattern
+    Design Patterns - Facade Pattern
+    Design Patterns - Flyweight Pattern
+    Design Patterns - Proxy Pattern
+    Chain of Responsibility Pattern
+    Design Patterns - Command Pattern
+    Design Patterns - Interpreter Pattern
+    Design Patterns - Iterator Pattern
+    Design Patterns - Mediator Pattern
+    Design Patterns - Memento Pattern
+    Design Patterns - Observer Pattern
+    Design Patterns - State Pattern
+    Design Patterns - Null Object Pattern
+    Design Patterns - Strategy Pattern
+    Design Patterns - Template Pattern
+    Design Patterns - Visitor Pattern
+    Design Patterns - MVC Pattern
+    Business Delegate Pattern
+    Composite Entity Pattern
+    Data Access Object Pattern
+    Front Controller Pattern
+    Intercepting Filter Pattern
+    Service Locator Pattern
+    Transfer Object Pattern
+
+    Design Patterns Resources
+    Design Patterns - Questions/Answers
+    Design Patterns - Quick Guide
+    Design Patterns - Useful Resources
+    Design Patterns - Discussion
+
+    Selected Reading
+    Developer's Best Practices
+    Questions and Answers
+    Effective Resume Writing
+    HR Interview Questions
+    Computer Glossary
+    Who is Who
+
+Design Patterns Online Quiz
+Advertisements
+Questions Page
+Next Quiz  
+
+Following quiz provides Multiple Choice Questions (MCQs) related to Design Patterns Framework. You will have to read all the given answers and click over the correct answer. If you are not sure about the answer then you can check the answer using Show Answer button. You can use Next Quiz button to check new set of questions in the quiz.
+Questions and Answers
+
+Q 1 - Which of the following is correct about Creational design patterns.
+
+A - These design patterns are specifically concerned with communication between objects.
+
+B - These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new opreator.
+
+C - These design patterns concern class and object composition. Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
+
+D - None of the above.
+Answer : B
+Explaination
+
+Creational design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new opreator.
+
+Q 2 - Which of the following describes the Builder pattern correctly?
+
+A - This pattern builds a complex object using simple objects and using a step by step approach.
+
+B - This pattern refers to creating duplicate object while keeping performance in mind.
+
+C - This pattern is used when creation of object directly is costly.
+
+D - This pattern is used when we need to decouple an abstraction from its implementation so that the two can vary independently.
+Answer : A
+Explaination
+
+Builder pattern builds a complex object using simple objects and using a step by step approach. This builder is independent of other objects.
+
+Q 3 - Which of the following describes the Flyweight pattern correctly?
+
+A - This pattern allows a user to add new functionality to an existing object without altering its structure.
+
+B - This pattern is used where we need to treat a group of objects in similar way as a single object.
+
+C - This pattern hides the complexities of the system and provides an interface to the client using which the client can access the system.
+
+D - This pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance.
+Answer : C
+Explaination
+
+Flyweight pattern is primarily used to reduce the number of objects created and to decrease memory footprint and increase performance.
+
+Q 4 - Which of the following describes the Interpreter pattern correctly?
+
+A - In this pattern a class represents functionality of another class.
+
+B - This pattern creates a chain of receiver objects for a request.
+
+C - This pattern provides a way to evaluate language grammar or expression.
+
+D - In this pattern a request is wrapped under an object as command and passed to invoker object.
+Answer : C
+Explaination
+
+Interpreter pattern provides a way to evaluate language grammar or expression. This type of pattern comes under behavioral pattern. This pattern involves implementing an expression interface which tells to interpret a particular context.
+
+Q 5 - Which of the following describes the Iterator pattern correctly?
+
+A - This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation.
+
+B - This pattern is used to reduce communication complexity between multiple objects or classes.
+
+C - This pattern is used to restore state of an object to a previous state.
+
+D - This pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically.
+Answer : A
+Explaination
+
+This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation.
+
+Q 6 - Which of the following describes the Visitor pattern correctly?
+
+A - In this pattern, a visitor class is used which changes the executing algorithm of an element class.
+
+B - This pattern is used to separate application's concerns.
+
+C - This pattern is used to decouple presentation tier and business tier.
+
+D - This pattern is used in EJB persistence mechanism.
+Answer : A
+Explaination
+
+In Visitor pattern, a visitor class is used which changes the executing algorithm of an element class.
+
+Q 7 - Which of the following describes the Front Controller pattern correctly?
+
+A - This pattern is used to separate low level data accessing API or operations from high level business services.
+
+B - This pattern is used to provide a centralized request handling mechanism so that all requests will be handled by a single handler.
+
+C - This pattern is used when we want to do some pre-processing / post-processing with request or response of the application.
+
+D - This pattern is used when we want to locate various services using JNDI lookup.
+Answer : B
+Explaination
+
+Front Controller pattern, is used to provide a centralized request handling mechanism so that all requests will be handled by a single handler.
+
+Q 8 - Which of the following pattern involves a single class which is responsible to create an object while making sure that only single object gets created?
+
+A - Factory Pattern
+
+B - Abstract Factory Pattern
+
+C - Singleton Pattern
+
+D - Transfer Object Pattern
+Answer : C
+Explaination
+
+Singleton Pattern involves a single class which is responsible to create an object while making sure that only single object gets created.
+
+Q 9 - Which type of design patterns concern class and object composition?
+
+A - Creational Design Patterns
+
+B - Structural Design Patterns
+
+C - Behavioral Design Pattern
+
+D - J2EE Design Patterns
+Answer : B
+Explaination
+
+Structural Design Patterns concern class and object composition. Concept of inheritance is used to compose interfaces and define ways to compose objects to obtain new functionalities.
+
+Q 10 - Which of the following is the correct list of entities of Intercepting pattern?
+
+A - Filter, Filter Chain, Target, Client
+
+B - Filter, Target, Filter Manager, Client
+
+C - Filter, Filter Chain, Target, Filter Manager, Client
+
+D - Filter, Filter Chain, Filter Manager, Client
+Answer : C
+Explaination
+
+Filter, Filter Chain, Target, Filter Manager, Client are the entities of Intercepting pattern.
+Questions Page
+Next Quiz  
+Advertisements
+img img img img img img
+Tutorials Point
+
+    Write for us FAQ's Helping Contact 
+
+© Copyright 2016. All Rights Reserved.

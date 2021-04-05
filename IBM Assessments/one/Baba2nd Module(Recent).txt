@@ -1,0 +1,232 @@
+1.How to write an abstract class
+
+ANS:-Italics
+
+2.How to write an Instance windows
+
+Ans: Underlined
+ 
+4.)How to separate multiple atrributes.
+
+Ans: ,(comma)
+ 
+5.) Behavioral UML diagram 
+Ans: Usecase
+
+6.) Set Attribute and Get Attribute are not part of 
+Ans:(A) HTTP SERVLET(ans) 
+    (B) SERVLET REQUEST 
+    (C) SERVLET CONFIG 
+    (D) SERVLET CONTEXT
+
+7.) How to find total no. of attributes 
+Ans: HttpSessionListener
+  
+11.)Family to create objects which has concrete class
+
+Ans:Abstract factory interface
+
+ 
+12.Preparedstatement execution options are
+ a. initialize(ans) 
+ b.started 
+ c. paused 
+ d. stopped 
+
+13.In javabean/Usebean reference id define?
+a. Classname
+b. Package 
+c. Instance(answer)
+d. None
+ 
+17.) getConnection(- , - , - ) . options were
+ a.) <jdbc url> <db username> < db password> (ans)
+ b.) <ODBC> <ODBC US> <ODBC ?>
+
+
+What is the output for the below code ?
+
+public class NameBean {
+private String str;
+
+NameBean(String str ){
+this.str = str;
+}
+
+public String toString() {
+return str;
+}
+} 
+
+import java.util.HashSet;
+
+public class CollClient {
+
+public static void main(String ... sss) {
+HashSet myMap = new HashSet();
+String s1 = new String("das");
+String s2 = new String("das");
+NameBean s3 = new NameBean("abcdef");
+NameBean s4 = new NameBean("abcdef");
+
+myMap.add(s1);
+myMap.add(s2);
+myMap.add(s3);
+myMap.add(s4);
+
+System.out.println(myMap);
+} 
+}
+
+
+
+
+options
+A)das abcdef abcdef
+B)das das abcdef abcdef
+C)das abcdef
+D)abcdef abcdef
+
+Correct answer is : A
+
+Explanations : Need to implement 'equals' and 'hashCode' methods to get unique Set for user defind objects(NameBean).
+String object internally implements 'equals' and 'hashCode' methods therefore Set only stored one value. 
+
+package nnew;
+
+import java.io.IOException;
+import javax.servlet.*;
+import javax.servlet.annotation.*;
+import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+
+@WebServlet("/ServletX")
+public class ServletX extends HttpServlet {
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+// TODO Auto-generated method stub
+//response.getWriter().append("Served at: ").append(request.getContextPath());
+request.getSession().setAttribute("key", new X());
+request.getSession().setAttribute("key", new X());
+request.getSession().setAttribute("key", "x");
+request.getSession().removeAttribute("key");
+
+}
+
+
+
+}
+class X implements HttpSessionBindingListener {
+public void valueBound(HttpSessionBindingEvent event) {
+System.out.print("B");
+}
+public void valueUnbound(HttpSessionBindingEvent event) {
+System.out.print("UB");
+}
+}
+
+
+
+
+
+BBUBUBB is the answer
+
+3. The ……………………….. package contains classes that help in connecting to a database, sending SQL statements to the database, and processing the query results.
+
+A) connection.sql
+
+B) db.sql
+
+C) pkg.sql
+
+D) java.sql(ANS)
+
+4. The ………………………….. method executes a simple query and returns a single Result Set object.
+
+A) executeUpdate()
+
+B) executeQuery()(ANS)
+
+C) execute()
+
+D) noexecute()
+
+5. The ……………………. method executes an SQL statement that may return multiple results.
+
+A) executeUpdate()
+
+B) executeQuery()
+
+C) execute()(ANS)
+
+D) noexecute()
+
+6. The …………………… object allows you to execute parametrized queries.
+
+A) ResultSet
+
+B) Parametrized
+
+C) PreparedStatement(ANS)
+
+D) Condition
+
+8. The parameters of the PreparedStatement object are …………………. when the user clicks on the Query button.
+
+A) initialized(ANS)
+
+B) started
+
+C) paused
+
+D) stopped
+
+9. The …………………. method sets the query parameters of the PreparedStatement Object.
+
+A) putString()
+
+B) insertString()
+
+C) setString()(ANS)
+
+D) setToString()
+
+10. Connection object can be initialized using the ………………………. method of the Driver Manager class.
+
+A) putConnection()
+
+B) setConnection()
+
+C) Connection()
+
+D) getConnetion()(ANS)
+
+
+The JDBC-ODBC Bridge driver translates the JDBC API to the ODBC API and used with …….
+
+A) JDBC drivers
+
+B) ODBC drivers(ANS)
+
+C) Both A and B
+
+D) None of the above
+
+. The ……………… object provides you with methods to access data from the table.
+
+A) ResultSet(ANS)
+
+B) Parametrized
+
+C) TableStatement
+
+D) Condition
+
+
+
+http://lucentblackboard.com/java-programming-examples/110-0-Collections
+

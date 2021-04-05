@@ -1,0 +1,83 @@
+1)Spring container can takes inputs from which of the following
+   ways
+
+  a)property  b)xml c)javacode  d)annotation   ----->b
+
+
+2)Which annotation is used for setters?
+  a)autowiring   b)autowired   c)autowire  
+Ans: autowired
+
+3)How does Spring decouple a class from an interface?
+
+   Using AOP.
+
+4)How to use Transaction managemant in Spring and how to
+  configure in XML file.      
+@Transactional
+	public void createCustomer(Customer cust) {
+		customerDAO.create(cust);
+	}
+
+<!-- Enable Annotation based Declarative Transaction Management -->
+	<tx:annotation-driven /> --------Ans
+
+@Transactional annotation can be applied over methods 
+as well as whole class. If you want all your methods 
+to have transaction management features,
+ you should annotate your class with this annotation.
+
+
+
+5)Default scope for Inner Beans
+   
+   a)singlton   b)request  c)prototype  d)session
+Ans:c
+
+
+6)Question like spring automatically Weaving
+
+ Spring AOP, like other pure Java AOP frameworks,
+ performs weaving at runtime.
+
+
+7)For post processor interface which of the following methos is
+invoked
+
+
+
+public interface InstanceValidator {
+  void validateInstance();
+}
+a)after intialization b)before  c)BeanPostProcessor
+ d)post processor
+Ans: C
+
+InstanceValidator interface defines a validateInstance
+ method that verifies whether the bean instance was 
+correctly initialized or not. We’ll soon see that the 
+validateInstance method is invoked by a BeanPostProcessor
+ implementation.
+
+8)JSR-250 Annotations are
+  @PostConstruct, @PreDestroy and @Resource annotations.
+
+9)
+
+which is used to scan java based packages in spring xml file
+
+<context:component-scan/>	@ComponentScan()
+Scan starts from base package and registers all controllers, 
+repositories, service, beans, etc.
+
+FYI:
+----------
+<mvc:annotation-driven/>   	
+@EnableWebMvc	Enable Spring MVC-specific annotations 
+like @Controller
+
+
+
+
+
+

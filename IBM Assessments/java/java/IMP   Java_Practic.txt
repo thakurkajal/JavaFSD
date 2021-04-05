@@ -1,0 +1,204 @@
+autoboxing/unboxing in java 1.5 example
+
+Name the package that contains classes that help in
+
+- connecting to a database ans:java.sql
+- processing servlets ans:javax.servlet and javax.servlet.http.
+- Threads etc java.lang
+
+- what is deleteRow() on Resultset object do? ans:deleting the current row.
+
+- What does Type4 Driver in JDBC do? ans:pure java driver platform independent.
+
+- Which type of Statement can execute parameterized queries .preparedStatement
+
+
+
+- What is the result of expression 9.45 + "8,2"? ans 9.458,2
+
+
+
+- Which symbol separates multiple attributes in GET  method? ( HTTP GET Method) ans&
+
+- What are the methods in HttpServletRequest and  HttpServletResponse 
+   http request
+   1. public void service(ServletRequest req,ServletResponse res) dispatches the request to the protected service method by converting the request and response object into http type.
+   2. protected void service(HttpServletRequest req, HttpServletResponse res) receives the request from the service method, and dispatches the request to the doXXX() method depending on the incoming http request type.
+   3. protected void doGet(HttpServletRequest req, HttpServletResponse res) handles the GET request. It is invoked by the web container.
+   4. protected void doPost(HttpServletRequest req, HttpServletResponse res) handles the POST request. It is invoked by the web container.
+   5.  protected void doHead(HttpServletRequest req, HttpServletResponse res) handles the HEAD request. It is invoked by the web container.
+   6. protected void doOptions(HttpServletRequest req, HttpServletResponse res) handles the OPTIONS request. It is invoked by the web container.
+   7. protected void doPut(HttpServletRequest req, HttpServletResponse res) handles the PUT request. It is invoked by the web container.
+   8. protected void doTrace(HttpServletRequest req, HttpServletResponse res) handles the TRACE request. It is invoked by the web container.
+   9. protected void doDelete(HttpServletRequest req, HttpServletResponse res) handles the DELETE request. It is invoked by the web container.
+  10.  protected long getLastModified(HttpServletRequest req) returns the time when HttpServletRequest was last modified since midnight January 1, 1970 GMT.
+
+
+- How can i get the month number using the Calendar class ? int month=getCalender().getCalender(month)
+
+- In Multiple try catch block , how can the super class exception is caught ans:first we need to call the subclass exception then only we can do it
+
+- Various Collections  - how are the objects returned (is it in same order or not ) hashset,treeset and linkedhashset.
+
+- What are the methods available on Statement  and Connection - what purpose each serve--------DAY 6 42nd slide,,,,,day 6 38 slide
+
+
+
+
+What will be the output of this  -
+
+1) 	String river = new String("TRAINING");
+	System.out.println(river.length()); 
+	
+	ans:8
+
+
+
+2)
+
+
+	String getValue(String word)
+	{
+	if (word.length() == 1)
+		return "";
+	else
+	return getValue( word.substring(0, word.length() - 1) ) + word.charAt(word.length() - 1);
+	}
+
+	What is the value of the string returned by getValue("DEMOS")
+
+	Ans- EMOS
+
+
+
+
+3) 
+	public class Question {
+
+	public static void main(String args[]) {
+	String s1 = "uvw";
+	String s2 = "xyz";
+	String s3 = s1.concat(s2.toUpperCase( ) );
+	System.out.println(s1+s2+s3);
+	} 
+	}
+
+	ans uvwxyzuvwXYZ
+
+
+4)
+	int a = 9;
+	int b = 14;
+	while(a<b) {
+		System.out.println("In the loop");
+		a+=2;
+		b-=2;	
+	}
+
+
+	ans:since we have post increment operator so 1st loop a=9;b=14 so while is true. nxt time a=9+2=11 and b=14-2=12.
+	In the loop
+	In the loop
+
+
+5)	 abstract class xyz
+	{
+		abstract  abc (int a, int b) { }
+	}
+
+	- What sort of compilation error you will get ? 
+
+	- How to fix the compilation error
+
+6) 
+	interface ATOB {
+		String s = "yo";
+		public void meth();
+	 }
+
+	interface BTOC { }
+
+	interface C extends ATOB, BTOC {
+		public void meth();
+		public void meth(int x);
+	 }
+
+	- Will this compile ?
+	Yes it will compile
+
+
+7)	int i  = -1;
+	int b = 10;
+	int val =  b/ i;
+	
+	ans:-10
+
+8)	 interface Data { 
+	public void load();
+	 }
+	 abstract class Info { 
+	public abstract void load(); 
+	}
+
+	How Can i inherit both the interface and abstract class ?
+Ans:	classname extends Info implements Data
+
+
+9) 
+
+	public class GenericTest<G> {
+	G g;
+	GenericTest(G g){
+	this.g =g;
+	}
+
+	public static void main(String[] args)
+	{
+	GenericTest<String> arr[] = new GenericTest[5]; 		//line 1
+	arr[0] = new GenericTest("Java"); 			//line 2
+	arr[1] = new GenericTest(1);			 	//line 3
+	arr[2] = (GenericTest<String>)new GenericTest(1); 		//line 4
+	arr[3] = (GenericTest<String>)new GenericTest<Integer>(1);	 //line 5
+	for(GenericTest o:arr)
+   	  {
+		System.out.println(o);
+	   }
+	}
+	}
+Ans: Error in Line 5
+
+
+10 ) 
+
+	class A {
+		static String str = "STRING_IN_A";
+	}
+
+	class B extends A {
+		static String str = "STRING_IN_B";
+	}
+Ans: STRING_IN_B
+
+
+11) 
+
+	int j=8;
+
+	while( (j < 10) && (j > 24)) {
+	 System.out.println("  Am here");
+	}
+	ans: while condition will always be false.
+	
+
+
+12) 
+	class output {
+	public static void main(String args[]){
+		 StringBuffer c = new StringBuffer("Hello");
+		 StringBuffer c1 = new StringBuffer("World");
+		 c.append(c1);
+		 System.out.print(c);
+		}
+	 }
+
+	ans:HelloWorld.

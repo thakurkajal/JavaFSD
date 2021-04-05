@@ -1,0 +1,12 @@
+Q1. TRUE
+Q2. resolver
+Q3. By implementing the last modified object
+Q4. True
+Q5. True
+Q6.TRUE
+Q7.UrlFilenameViewController
+Q8. ALL OF THE ABOVE
+Q9.A,C,D (Check it by taking Quiz in bullraider)
+Q10.InternalPathMethodNameResolve
+Q11.CommandController
+Q12.JasperreportsViewResolver

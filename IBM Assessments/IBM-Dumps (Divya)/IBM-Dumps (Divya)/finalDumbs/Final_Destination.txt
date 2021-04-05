@@ -1,0 +1,199 @@
+1. VALID SPRING BEAN DEFINING     //imp
+
+	ID,CLASS
+	option a,d
+2. basic packages for spring ioc container?                       //imp
+The org.springframework.beans and org.springframework.context
+ packages are the basis for Spring Framework's IoC container. 
+
+
+3. what is annotation aspect style?   //imp
+  @Aspectj
+  @Aspect
+
+4.STANDARD JAVA INTERFACE  //imp
+	A. SERIALIZE
+	B.LONG
+	C.SYSTEM
+	D.COLLECTION
+
+	SERIALIZE
+
+	
+5.TO USE JAVA.UTIL.LIST, WHAT IS THE SPRING COLLECTION ELEMENT THAT U NEED?   //imp
+	
+	<list>
+
+	
+6. SPRING RESOLVE   //imp
+	
+	AT RUNTIME
+	
+7. JDBC DAO
+	
+	@REPOSITORY
+	
+8. JAVA BASED WHAT WE USE   //imp
+
+	@CONFIGURATION
+9. HOLLYWOOD                   //imp
+	
+	DONT CALL US WE WILL CALL YOU
+	
+10. modes of AUTOWIRING   //imp
+	FIVE
+
+
+11 HOW DO YOU DECLARE MVC ANNOTATION IN BEAN IN XML FILE?    //imp
+	
+	<MVC: ANNOTATION-CONFIG/>
+
+12. Which of the following beans isn’t significant for the WebApplicationContext? //imp
+
+    1. Locale resolver.
+    2. Handler exception resolver.
+    3. Multipart file.
+    4. None of these.
+    5. Resolver. 
+
+	4
+	
+13. Which of the following statements is true for @RequestMapping annotation? //imp
+
+    1. Can be applied to the controller classes.
+    2. Can be applied to the controller methods.
+    3. None of these.
+    4. Used to map web requests onto specific handler methods.
+    5. Used to map web requests onto specific handler classes. 
+
+	3
+	if multiple ans then 4,5
+
+
+
+14.ANNOTATION FOR CONFIGURATION   //imp
+
+	@CONFIGURATION
+	
+15. BASIC PACKAGES                  //imp-.beans.context
+
+	org.springframework.context.ApplicationContext;
+	org.springframework.context.support.ClassPathXMLApplicationContext;
+	
+	or
+ 
+//	ORG.SPRINGFRAMEWORK CONTEXT AND ORG.SPRINGFRAMEWORK.APPLICATION
+
+
+16. TRADITIONAL TRANSACTION MANAGEMENT   
+
+	c
+17. types of autowire-4   
+	diff modes of autowiring=5      //imp
+
+
+18. autowire+auto discovery 
+
+-> reduce java code    //imp
+
+
+19 What is prototype scope?
+A - This scopes a single bean definition to have any number of object
+instances.
+B - This scopes the bean definition to a single instance per HTTP
+Request.
+C - This scopes the bean definition to a single instance per HTTP
+Session.
+D - This scopes the bean definition to a single instance per HTTP
+Application/ Global session.
+ 
+Ans A
+
+
+
+
+20 What is default scope of bean in Spring framework?
+A - singleton
+B - prototype
+C - request
+D - session
+
+Ans A
+
+
+Q 21 - How can you inject Java Collection in Spring?
+A - Using list, set, map or props tag.
+B - Using lit, set, map or collection tag.
+C - Using list, set, props or collection tag.
+D - Using list, collection, map or props tag.
+
+Ans A
+
+
+22 What are the different points where weaving can be applied?
+A - Compile time, load time
+B - Compile time, run time
+C - Run time
+D - Compile time, load Time, Run time
+
+
+Ans D
+
+
+
+23 Which of the following database is not supported using
+jdbcTemplate?
+A - MySql
+B - PostgresSql
+C - NoSql
+D - Oracle
+
+Ans C
+
+
+
+25 Which class acts as IoC Container?
+A - ServletContext
+B - DispatcherServlet
+C - ApplicationContext
+D - None of the above
+Ans C
+
+
+Q 23 - What stands true for spring framework?
+A - Spring framework is a light weight framework.
+B - Spring framework is a heavy weight framework.
+Ans A
+
+
+Q 24 - Expression Language/ SpEL was introduced in which version of
+spring
+framework.
+A - 1.0
+B - 2.0
+C - 3.0
+D - 4.0
+Ans C
+
+
+
+25.What is the scope of stateful bean?
+A - session
+B - global-session
+C - prototype
+D - request
+Ans C
+
+
+26.class is used to map a database row to a java object in
+spring?
+A - ResultSet
+B - RowMapper
+C - RowSetMapper
+D - ResultSetMapper
+Ans B
+
+
+
+
+

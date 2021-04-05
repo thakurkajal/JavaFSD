@@ -1,0 +1,335 @@
+1. Does Spring provide programmatic transaction management? Select a unique answer.
+
+a.Yes using the @Transactional bean post processor
+
+b.Yes with the TransactionTemplate class
+
+
+3.Yes with the TransactionService class
+
+4.Yes using the @Transactional bean post processor
+
+ans: b
+
+Explanation
+1.	The TransactionTemplate class provides an execute(TransactionCallback) method 
+2.	The TransactionService class does not exists 
+3.	The @Transactional annotation is for declarative transaction management
+
+
+2. How could you externalize constants from a Spring configuration file or a Spring annotation into a .properties file? Select one or more 
+
+
+a. By using the <context:property-placeholder /> tag
+b.By using the <util:constant /> tag
+c.By declaring the ConstantPlaceholderConfigurer bean post processor
+d. By using the c: namespace
+
+ans: a
+
+3.  To validate Java beans in a web application using annotations.
+a) XML
+b) Java Based
+c) JAR-303 standard
+d) All of the mentioned
+
+ans: d
+
+4. Annotation used to indicate a field has to have a minimum of 2 characters.
+a) @NotNull
+b) @Size
+c) @MaxSize
+d) @size
+
+
+Answer: b
+Explanation: @Size annotation used to indicate a field has to have a minimum of 2 characters.
+
+5. Spring MVC supports generating Excel files using which of the following libraries.
+a) Apache POI library
+b) JExcelAPI library
+c) All of the mentioned
+d) None of the mentioned
+
+ans: C
+
+6. Interface for Dispatcher Servlet to auto detect view resolver beans.
+a) localeResolver
+b) tiles
+c) ViewResolver
+d) none of the mentioned. 
+
+ans: C
+
+Explanation: Spring MVC comes with several ViewResolver implementations for you to resolve views using different strategies.
+
+
+7.By default, XmlViewResolver loads view beans from /WEB-INF/views.xml which is final.
+a) True
+b) False
+
+ans: b
+
+8.Views that can’t be resolved byInternalResourceViewResolver.
+a) redirect
+b) redirect:prefix
+c) redirect:suffix
+d) all of the mentioned
+
+ans: a
+
+9. Annotation which allows a controller’s field to be assigned using Spring Expression Language(SpEL)
+a) @Value
+b) @After
+c) @Default
+d) @None
+
+ans: a
+
+10.SpEL statements are recognizable.
+a) True
+b) False
+View Answer
+
+Answer: a
+Explanation: They use a notation in the form “#{ SpEL statement }”.
+
+11.To publish a REST service with Spring.
+a) publishing an application’s data as a REST service
+b) accessing data from third-party REST services
+c) none of the mentioned
+d) all of the mentioned
+
+ans: a b
+
+12.  Publishing an application’s data as a REST service requires.
+a) @RequestMapping
+b) @PathVariable
+c) All of the mentioned
+d) None of the mentioned
+
+ans: a b
+
+13.Annotation added as an input parameter to the handler method.
+a) @PathVariable
+b) @Path
+c) @PathLocale
+d) None of the mentioned
+
+ans: a
+
+14. Which of the following statements is true regarding the @ResponseStatus annotation?
+
+a. @ResponseStatus is detected on nested exceptions
+b.The ExceptionHandlerExceptionResolver uses the @ResponseStatus annotation to map exception to HTTP status code
+c. A controller handler is annotated with the @ResponseStatus, the response status set by RedirectView takes precedence over the annotation value.
+d. The @ResponseStatus annotation can go on a @RequestMapping method or a @RestController class or a business exception class.
+
+ans: a
+
+15. Default localeResolver used by Spring.
+a) AcceptHeaderLocale
+b) AcceptHeader
+c) AcceptHeaderLocaleResolver
+d) AcceptLocaleResolver
+
+ans: c
+
+16. Alternative way to resolve locales.
+a) AcceptHeaderLocale
+b) AcceptHeader
+c) AcceptHeaderLocaleResolver
+d) SessionLocaleResolver
+
+ans: d
+
+17. General-purpose class that allows a response to be rendered using a marshaller.
+a) MarshallingView
+b) Marshalling
+c) View
+d) All of the mentioned
+View Answer
+
+Answer: a
+Explanation: The membertemplate view is defined as a MarshallingView type, which is a general-purpose class that allows a response to be rendered using a marshaller.
+
+18. Annotation which allows the Jaxb2Marshaller marshaller to detect a class’s (i.e., object’s) fields.
+a) @XmlRootElement
+b) @XmlRoot
+c) @NotNull
+d) None of the mentioned
+
+ans: a
+
+19.How to auto-inject into a field a Spring bean by its name? Select one or more answer choices.
+
+a. By using both the @Autowired and the @Qualifier Spring annotations
+
+b.By using the @Autowired annotation and naming the field with the bean name 
+
+c. With the name attribute of the @Autowired annoton
+
+d. By using the single @Qualifier annotation
+
+ans : a
+
+20. Considering 2 classes AccountServiceImpl and ClientServiceImpl. Any of these 2 classes inherits from each other. What is the result of the following pointcut expression?
+
+execution(* *..AccountServiceImpl.update(..)) 
+&& execution(* *..ClientServiceImpl.update(..))
+
+a.No joint point is defined
+b.Matches public update methods of the 2 classes, whatever the arguments
+
+c.Matches any update methods of the 2 classes, whatever the arguments and method visibility
+
+d.Matches any update methods of the 2 classes, with one more arguments and whatever method visibility
+
+ans: a
+
+21. Select the right statement about referring a Spring configuration file inside the package com.example.myapp in the below example? 
+ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/com.example.myapp.config.xml");
+
+a. all of the above
+b. The classpath: prefix could be omitted
+c.Package name using the dot character is not well formatted
+
+d.The slash character preceding com.example could be omit
+
+ans: a
+
+22. Using the Spring AOP framework, what is the visibility of the method matches by the following join point?
+
+@Pointcut("execution(* *(..))") 
+private void anyOperation() {};
+
+a. Public methods
+b. All methods, whereas their visibility
+
+c.All methods, except private method
+
+d. Protected and public methods
+
+ans: a
+
+23. What the name of the bean defined in the following configuration class? Select a single answer. 
+@Configuration 
+public class ApplicationConfig {
+
+@Autowired 
+private DataSource dataSource; 
+
+@Bean 
+ClientRepository clientRepository() { 
+ClientRepository accountRepository = new JpaClientRepository(); 
+accountRepository.setDataSource(dataSource); 
+return accountRepository; 
+} 
+}
+
+a. clientRepository
+b. JpaClientRepository
+c.jpaClientRepository
+d.Two beans are defined: a data souce and a repository
+
+ans: a
+
+24. Which of the following is true regarding the below Spring controller?
+
+@RestController 
+public class OwnerController {
+
+@RequestMapping(value = "/owner/{ownerId}", method = RequestMethod.POST) 
+@ResponseBody 
+public Owner findOwner(@PathVariable("ownerId") int ownerId) { 
+return new Owner(); 
+} 
+}
+
+a. RequestMethod.GET method is more accurate than POST
+b. @ResponseBody could be removed
+c. @PathVariable should be replaced with the @PathParam annotation
+d. Returning the 201 HTTP status code is better
+
+ans: a
+
+25. What is an advice? Select a unique answer.
+
+a.An action taken by an aspect at a particular join point
+b. A point during the execution of a program
+c. An aspect and a pointcut
+d. A predicate that matches join points
+
+ans: a
+
+26. What is the easiest method to write a unit test?
+
+a. @RequestMapping("/displayAccount") 
+String displayAccount(@RequestParam("accountId") int id, Model model)
+
+b. void displayAccount(HttpServletRequest req, HttpServletResponse resp)	throws ServletException, IOException
+
+c. void displayAccount(HttpServletRequest req, HttpSession Session) 
+throws ServletException, IOException
+
+d. @RequestMapping("/displayAccount") 
+String displayAccount(@PathVariable("accountId") int id, Model model)
+
+ans: a
+
+27. Select method’s signatures that match with the following pointcut: 
+execution(* com.test.service..*.*(*))
+
+a.void com.test.service.MyServiceImpl#transfert(Money amount)
+b. void com.test.service.account.MyServiceImpl#transfert(Money amount)
+c. void com.test.service.MyServiceImpl#transfert(Account account, Money amount)
+d. void com.test.service.account.MyServiceImpl#transfert(Account account, Money amount)
+e. None of the above
+
+ans: a
+
+28. Given the Spring configuration file, which are the correct statements? 
+<bean class="com.spring.service.BankServiceImpl" 
+p:bankName="NationalBank"> 
+</bean>
+
+a. The p namespace has to be declared
+
+b. NationalBank is a scalar value 
+c. Bean id is bankServiceImpl
+
+d. The BankServiceImpl references a NationalBank bean
+
+ans: a
+
+29. Given the following configuration class, what are the correct affirmations? Select one or more answers. 
+public class ApplicationConfig {
+
+private DataSource dataSource;
+
+@Autowired 
+public ApplicationConfig(DataSource dataSource) { 
+this.dataSource = dataSource; 
+} 
+
+@Bean(name="clientRepository") 
+ClientRepository jpaClientRepository() { 
+return new JpaClientRepository(); 
+} 
+}
+
+a. Configuration annotation is missing
+b. Default or no-arg constructor is missing
+c. @Bean name is ambiguous
+d. @Bean scope is prototype
+
+ans: a
+
+30.  Using JdbcTemplate, what is the Spring provided class you will use for result set parsing and merging rows into a single object? Select a unique answer.
+
+a. ResultSetExtractor
+b. RowMapper
+c. RowCallbackHandler
+d. ResultSetMapper
+
+ans: a  

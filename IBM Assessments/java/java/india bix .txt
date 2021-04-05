@@ -1,0 +1,1271 @@
+1. Which is true about an anonymous inner class?
+	A. It can extend exactly one class and implement exactly one interface.
+	B. It can extend exactly one class and can implement multiple interfaces.
+	C. It can extend exactly one class or implement exactly one interface.
+	D. It can implement multiple interfaces regardless of whether it also extends a class.
+
+Answer: Option C
+
+2.  	class Boo 
+{
+    Boo(String s) { }
+    Boo() { }
+}
+class Bar extends Boo 
+{
+    Bar() { }
+    Bar(String s) {super(s);}
+    void zoo() 
+    {
+    // insert code here
+    }
+}
+
+which one create an anonymous inner class from within class Bar?
+
+A. Boo f = new Boo(24) { };
+B. Boo f = new Bar() { };
+C. Bar f = new Boo(String s) { };
+D. Boo f = new Boo.Bar(String s) { };
+
+Answer: Option B
+
+3.  	Which is true about a method-local inner class?
+	A.It must be marked final.
+	B.It can be marked abstract.
+	C.It can be marked public.
+	D.It can be marked static.
+
+Answer: Option B
+
+4.  	Which statement is true about a static nested class?
+	A. 	You must have a reference to an instance of the enclosing class in order to instantiate it.
+	B. 	It does not have access to nonstatic members of the enclosing class.
+	C. 	It's variables and methods must be static.
+	D. 	It must extend the enclosing class.
+
+Answer: Option B
+
+5.  	Which constructs an anonymous inner class instance?
+	A. 	Runnable r = new Runnable() { };
+	B. 	Runnable r = new Runnable(public void run() { });
+	C. 	Runnable r = new Runnable { public void run(){}};
+	D. 	System.out.println(new Runnable() {public void run() { }});
+
+Answer: Option D
+
+6.  	class Foo 
+{
+    class Bar{ }
+}
+class Test 
+{
+    public static void main (String [] args) 
+    {
+        Foo f = new Foo();
+        /* Line 10: Missing statement ? */
+    }
+}
+
+which statement, inserted at line 10, creates an instance of Bar?
+
+A. 	Foo.Bar b = new Foo.Bar();
+B. 	Foo.Bar b = f.new Bar();
+C. 	Bar b = new f.Bar();
+D. 	Bar b = f.new Bar();
+
+Answer: Option B
+
+7.  	public class MyOuter 
+{
+    public static class MyInner 
+    {
+        public static void foo() { }
+    }
+}
+
+which statement, if placed in a class other than MyOuter or MyInner, instantiates an instance of the nested class?
+
+A. 	MyOuter.MyInner m = new MyOuter.MyInner();
+B. 	MyOuter.MyInner mi = new MyInner();
+C. 	MyOuter m = new MyOuter();
+D. 	MyInner mi = new MyOuter.MyInner();
+
+Answer: Option A
+
+8.What will be the output of the program?
+
+public class Foo 
+{
+    Foo() 
+    {
+        System.out.print("foo");
+    }
+    
+class Bar
+{
+    Bar() 
+    {
+        System.out.print("bar");
+    }
+    public void go() 
+    {
+        System.out.print("hi");
+    }
+} /* class Bar ends */
+
+    public static void main (String [] args) 
+    {
+        Foo f = new Foo();
+        f.makeBar();
+    }
+    void makeBar() 
+    {
+        (new Bar() {}).go();
+    }
+}/* class Foo ends */
+
+A. 	Compilation fails.
+B. 	An error occurs at runtime.
+C. 	It prints "foobarhi"
+D. 	It prints "barhi"
+
+Answer: Option C
+
+9.What will be the output of the program?
+
+public class HorseTest 
+{
+    public static void main (String [] args) 
+    {
+        class Horse 
+        {
+            public String name; /* Line 7 */
+            public Horse(String s) 
+            {
+                name = s;
+            }
+        } /* class Horse ends */
+        
+        Object obj = new Horse("Zippo"); /* Line 13 */
+        Horse h = (Horse) obj; /* Line 14 */
+        System.out.println(h.name);
+    }
+} /* class HorseTest ends */
+
+A. 	An exception occurs at runtime at line 10.
+B. 	It prints "Zippo".
+C. 	Compilation fails because of an error on line 7.
+D. 	Compilation fails because of an error on line 13.
+
+Answer: Option B
+
+10.What will be the output of the program?
+
+public class TestObj 
+{
+    public static void main (String [] args) 
+    {
+        Object o = new Object() /* Line 5 */
+        {
+            public boolean equals(Object obj) 
+            {
+                return true;
+            } 
+        }      /* Line 11 */
+        
+        System.out.println(o.equals("Fred"));
+    }
+}
+
+A. 	It prints "true".
+B. 	It prints "Fred".
+C. 	An exception occurs at runtime.
+D. 	Compilation fails
+
+Answer: Option D
+
+11.What will be the output of the program?
+
+public abstract class AbstractTest 
+{
+    public int getNum() 
+    {
+        return 45;
+    }
+    public abstract class Bar 
+    {
+        public int getNum() 
+        {
+            return 38;
+        }
+    }
+    public static void main (String [] args) 
+    {
+        AbstractTest t = new AbstractTest() 
+        {
+            public int getNum() 
+            {
+                return 22;
+            }
+        };
+        AbstractTest.Bar f = t.new Bar() 
+        {
+            public int getNum() 
+            {
+                return 57;
+            }
+        };
+        
+        System.out.println(f.getNum() + " " + t.getNum());
+    }
+}
+
+A. 	57 22
+B. 	45 38
+C. 	45 57
+D. 	An exception occurs at runtime.
+
+Answer: Option A
+
+12.  void start() {  
+    A a = new A(); 
+    B b = new B(); 
+    a.s(b);  
+    b = null; /* Line 5 */
+    a = null;  /* Line 6 */
+    System.out.println("start completed"); /* Line 7 */
+} 
+
+When is the B object, created in line 3, eligible for garbage collection?
+
+A. 	after line 5
+B. 	after line 6
+C. 	after line 7
+D. 	There is no way to be absolutely certain.
+
+Answer: Option D
+
+  	
+
+13.class HappyGarbage01 
+{ 
+    public static void main(String args[]) 
+    {
+        HappyGarbage01 h = new HappyGarbage01(); 
+        h.methodA(); /* Line 6 */
+    } 
+    Object methodA() 
+    {
+        Object obj1 = new Object(); 
+        Object [] obj2 = new Object[1]; 
+        obj2[0] = obj1; 
+        obj1 = null; 
+        return obj2[0]; 
+    } 
+}
+
+Where will be the most chance of the garbage collector being invoked?
+
+A. 	After line 9
+B. 	After line 10
+C. 	After line 11
+D. 	Garbage collector never invoked in methodA()
+
+Answer: Option D
+
+14.  class Bar { } 
+class Test 
+{  
+    Bar doBar() 
+    {
+        Bar b = new Bar(); /* Line 6 */
+        return b; /* Line 7 */
+    } 
+    public static void main (String args[]) 
+    { 
+        Test t = new Test();  /* Line 11 */
+        Bar newBar = t.doBar();  /* Line 12 */
+        System.out.println("newBar"); 
+        newBar = new Bar(); /* Line 14 */
+        System.out.println("finishing"); /* Line 15 */
+    } 
+}
+
+At what point is the Bar object, created on line 6, eligible for garbage collection?
+
+A. 	after line 12
+B. 	after line 14
+C. 	after line 7, when doBar() completes
+D. 	after line 15, when main() completes
+
+Answer: Option B
+
+15. 	
+
+class Test 
+{  
+    private Demo d; 
+    void start() 
+    {  
+        d = new Demo(); 
+        this.takeDemo(d); /* Line 7 */
+    } /* Line 8 */
+    void takeDemo(Demo demo) 
+    { 
+        demo = null;  
+        demo = new Demo(); 
+    } 
+}
+
+When is the Demo object eligible for garbage collection?
+
+A. 	After line 7
+B. 	After line 8
+C. 	After the start() method completes
+D. 	When the instance running this code is made eligible for garbage collection.
+
+Answer: Option D
+  	
+
+16.public class X 
+{
+    public static void main(String [] args) 
+    {
+        X x = new X();
+        X x2 = m1(x); /* Line 6 */
+        X x4 = new X();
+        x2 = x4; /* Line 8 */
+        doComplexStuff();
+    }
+    static X m1(X mx) 
+    {
+        mx = new X();
+        return mx;
+    }
+}
+
+After line 8 runs. how many objects are eligible for garbage collection?
+
+A. 	0  
+B. 	1
+C. 	2
+D. 	3
+
+Answer: Option B
+
+17. 	public Object m() 
+{  
+    Object o = new Float(3.14F); 
+    Object [] oa = new Object[l];
+    oa[0] = o; /* Line 5 */
+    o = null;  /* Line 6 */
+    oa[0] = null; /* Line 7 */
+    return o; /* Line 8 */
+}
+
+When is the Float object, created in line 3, eligible for garbage collection?
+
+A. 	just after line 5
+B. 	just after line 6
+C. 	just after line 7
+D. 	just after line 8
+
+Answer: Option C
+
+18.  	class X2 
+{
+    public X2 x;
+    public static void main(String [] args) 
+    {
+        X2 x2 = new X2();  /* Line 6 */
+        X2 x3 = new X2();  /* Line 7 */
+        x2.x = x3;
+        x3.x = x2;
+        x2 = new X2();
+        x3 = x2; /* Line 11 */
+        doComplexStuff();
+    }
+}
+
+after line 11 runs, how many objects are eligible for garbage collection?
+
+A. 	0
+B. 	1
+C. 	2
+D. 	3
+
+Answer: Option C
+
+19. What allows the programmer to destroy an object x?
+A. 	x.delete()
+B. 	x.finalize()
+C. 	Runtime.getRuntime().gc()
+D. 	Only the garbage collection system can destroy an object.
+
+Answer: Option D
+
+20.  	Which statement is true?
+A. 	Programs will not run out of memory.
+B. 	Objects that will never again be used are eligible for garbage collection.
+C. 	Objects that are referred to by other objects will never be garbage collected.
+D. 	Objects that can be reached from a live thread will never be garbage collected.
+
+Answer: Option D
+
+  	
+
+21.Which statement is true?
+A. 	Memory is reclaimed by calling Runtime.gc().
+B. 	Objects are not collected if they are accessible from live threads.
+C. 	An OutOfMemory error is only thrown if a single block of memory cannot be found that is large enough for a particular requirement.
+D. 	Objects that have finalize() methods always have their finalize() methods called before the program ends.
+
+Answer: Option B
+
+22.Which statement is true?
+A. 	Calling Runtime.gc() will cause eligible objects to be garbage collected.
+B. 	The garbage collector uses a mark and sweep algorithm.
+C. 	If an object can be accessed from a live thread, it can't be garbage collected.
+D. 	If object 1 refers to object 2, then object 2 can't be garbage collected.
+
+Answer: Option C
+
+23.Which statement is true?
+A. 	All objects that are eligible for garbage collection will be garbage collected by the garbage collector.
+B. 	Objects with at least one reference will never be garbage collected.
+C. 	Objects from a class with the finalize() method overridden will never be garbage collected.
+D. 	Objects instantiated within anonymous inner classes are placed in the garbage collectible heap.
+
+
+
+
+24.What is the value of "d" after this line of code has been executed?
+
+double d = Math.round ( 2.5 + Math.random() );
+
+A. 	2
+B. 	3
+C. 	4
+D. 	2.5
+
+Answer: Option B
+
+25.Which of the following would compile without error?
+A. 	int a = Math.abs(-5);
+B. 	int b = Math.abs(5.0);
+C. 	int c = Math.abs(5.5F);
+D. 	int d = Math.abs(5L);
+
+Answer: Option A
+  	
+
+26.Which of the following are valid calls to Math.max?
+
+    Math.max(1,4)
+    Math.max(2.3, 5)
+    Math.max(1, 3, 5, 7)
+    Math.max(-1.5, -2.8f)
+
+A. 	1, 2 and 4
+B. 	2, 3 and 4
+C. 	1, 2 and 3
+D. 	3 and 4
+
+Answer: Option A
+
+  	
+
+27.public class Myfile 
+{ 
+    public static void main (String[] args) 
+    {
+        String biz = args[1]; 
+        String baz = args[2]; 
+        String rip = args[3]; 
+        System.out.println("Arg is " + rip); 
+    } 
+}
+
+Select how you would start the program to cause it to print: Arg is 2
+
+A. 	java Myfile 222
+B. 	java Myfile 1 2 2 3 4
+C. 	java Myfile 1 3 2 2
+D. 	java Myfile 0 1 2 3
+
+Answer: Option C
+
+  	
+
+28.What will be the output of the program?
+
+String x = new String("xyz");
+String y = "abc";
+x = x + y;
+
+How many String objects have been created?
+
+A. 	2
+B. 	3
+C. 	4
+D. 	5
+
+Answer: Option C
+
+29.What will be the output of the program?
+
+public class WrapTest 
+{
+    public static void main(String [] args) 
+    {
+        int result = 0;
+        short s = 42;
+        Long x = new Long("42");
+        Long y = new Long(42);
+        Short z = new Short("42");
+        Short x2 = new Short(s);
+        Integer y2 = new Integer("42");
+        Integer z2 = new Integer(42);
+
+        if (x == y) /* Line 13 */
+            result = 1;
+        if (x.equals(y) ) /* Line 15 */
+            result = result + 10;
+        if (x.equals(z) ) /* Line 17 */
+            result = result + 100;
+        if (x.equals(x2) ) /* Line 19 */
+            result = result + 1000;
+        if (x.equals(z2) ) /* Line 21 */
+            result = result + 10000;
+
+        System.out.println("result = " + result);
+    }
+}
+
+A. 	result = 1
+B. 	result = 10
+C. 	result = 11
+D. 	result = 11010
+
+Answer: Option B
+
+30.What will be the output of the program?
+
+public class BoolTest 
+{
+    public static void main(String [] args) 
+    {
+        int result = 0;
+
+        Boolean b1 = new Boolean("TRUE");
+        Boolean b2 = new Boolean("true");
+        Boolean b3 = new Boolean("tRuE");
+        Boolean b4 = new Boolean("false");
+
+        if (b1 == b2)  /* Line 10 */
+            result = 1;
+        if (b1.equals(b2) ) /* Line 12 */
+            result = result + 10;
+        if (b2 == b4)  /* Line 14 */
+            result = result + 100;
+        if (b2.equals(b4) ) /* Line 16 */
+            result = result + 1000;
+        if (b2.equals(b3) ) /* Line 18 */
+            result = result + 10000;
+
+        System.out.println("result = " + result);
+    }
+}
+
+A. 	0
+B. 	1
+C. 	10
+D. 	10010
+
+Answer: Option D
+
+31.What will be the output of the program?
+
+public class ObjComp 
+{
+    public static void main(String [] args ) 
+    {
+        int result = 0;
+        ObjComp oc = new ObjComp();
+        Object o = oc;
+
+        if (o == oc)  
+            result = 1;
+        if (o != oc)  
+            result = result + 10;
+        if (o.equals(oc) )  
+            result = result + 100;
+        if (oc.equals(o) )  
+            result = result + 1000;
+
+        System.out.println("result = " + result);
+    }
+}
+
+A. 	1
+B. 	10
+C. 	101
+D. 	1101
+
+Answer: Option D
+
+32.What will be the output of the program?
+
+public class Example 
+{
+    public static void main(String [] args) 
+    {
+        double values[] = {-2.3, -1.0, 0.25, 4};
+        int cnt = 0;
+        for (int x=0; x < values.length; x++) 
+        {
+            if (Math.round(values[x] + .5) == Math.ceil(values[x])) 
+            {
+                ++cnt;
+            }
+        }
+        System.out.println("same results " + cnt + " time(s)");
+    }
+}
+
+A. 	same results 0 time(s)
+B. 	same results 2 time(s)
+C. 	same results 4 time(s)
+D. 	Compilation fails.
+
+Answer: Option B
+
+33.What will be the output of the program?
+
+public class Test178 
+{ 
+    public static void main(String[] args) 
+    {
+        String s = "foo"; 
+        Object o = (Object)s; 
+        if (s.equals(o)) 
+        { 
+            System.out.print("AAA"); 
+        } 
+        else 
+        {
+            System.out.print("BBB"); 
+        } 
+        if (o.equals(s)) 
+        {
+            System.out.print("CCC"); 
+        } 
+        else 
+        {
+            System.out.print("DDD"); 
+        } 
+    } 
+}
+
+A. 	AAACCC
+B. 	AAADDD
+C. 	BBBCCC
+D. 	BBBDDD
+
+Answer: Option A
+
+34.What will be the output of the program?
+
+String x = "xyz";
+x.toUpperCase(); /* Line 2 */
+String y = x.replace('Y', 'y');
+y = y + "abc";
+System.out.println(y);
+
+A. 	abcXyZ
+B. 	abcxyz
+C. 	xyzabc
+D. 	XyZabc
+
+Answer: Option C
+
+ 	
+
+35.What will be the output of the program?
+
+int i = (int) Math.random();
+
+A. 	i = 0
+B. 	i = 1
+C. 	value of i is undetermined
+D. 	Statement causes a compile error
+
+Answer: Option A
+
+37.What will be the output of the program?
+
+class A 
+{ 
+    public A(int x){} 
+} 
+class B extends A { } 
+public class test 
+{ 
+    public static void main (String args []) 
+    {
+        A a = new B(); 
+        System.out.println("complete"); 
+    } 
+}
+
+A. 	It compiles and runs printing nothing
+B. 	Compiles but fails at runtime
+C. 	Compile Error
+D. 	Prints "complete"
+
+Answer: Option C
+
+37.What will be the output of the program?
+
+int i = 1, j = 10; 
+do 
+{
+    if(i++ > --j) /* Line 4 */
+    {
+        continue; 
+    } 
+} while (i < 5); 
+System.out.println("i = " + i + "and j = " + j); /* Line 9 */
+
+A. 	i = 6 and j = 5
+B. 	i = 5 and j = 5
+C. 	i = 6 and j = 6
+D. 	i = 5 and j = 6
+
+Answer: Option D
+
+ 	
+
+39.What will be the output of the program?
+
+public class ExamQuestion7 
+{  
+    static int j; 
+    static void methodA(int i)
+    {
+        boolean b; 
+        do
+        { 
+            b = i<10 | methodB(4); /* Line 9 */
+            b = i<10 || methodB(8);  /* Line 10 */
+        }while (!b); 
+    } 
+    static boolean methodB(int i)
+    {
+        j += i; 
+        return true; 
+    } 
+    public static void main(String[] args)
+    {
+        methodA(0); 
+        System.out.println( "j = " + j ); 
+    } 
+}
+
+A. 	j = 0
+B. 	j = 4
+C. 	j = 8
+D. 	The code will run with no output
+
+Answer: Option B
+
+ 	
+
+39.What will be the output of the program?
+
+try 
+{
+    Float f1 = new Float("3.0");
+    int x = f1.intValue();
+    byte b = f1.byteValue();
+    double d = f1.doubleValue();
+    System.out.println(x + b + d);
+}
+catch (NumberFormatException e) /* Line 9 */
+{
+    System.out.println("bad number"); /* Line 11 */
+}
+
+A. 	9.0
+B. 	bad number
+C. 	Compilation fails on line 9.
+D. 	Compilation fails on line 11.
+
+Answer: Option A
+
+  	
+
+40.What will be the output of the program?
+
+class Q207 
+{ 
+    public static void main(String[] args) 
+    {
+        int i1 = 5; 
+        int i2 = 6; 
+        String s1 = "7"; 
+        System.out.println(i1 + i2 + s1); /* Line 8 */
+    } 
+}
+
+A. 	18
+B. 	117
+C. 	567
+D. 	Compiler error
+
+Answer: Option B
+
+  	
+
+41.What will be the output of the program?
+
+public class SqrtExample 
+{
+    public static void main(String [] args) 
+    {
+        double value = -9.0;
+        System.out.println( Math.sqrt(value));
+    }
+}
+
+A. 	3.0
+B. 	-3.0
+C. 	NaN
+D. 	Compilation fails.
+
+Answer: Option C
+
+
+42.What will be the output of the program?
+
+String s = "ABC"; 
+s.toLowerCase(); 
+s += "def"; 
+System.out.println(s);
+
+A. 	ABC
+B. 	abc
+C. 	ABCdef
+D. 	Compile Error
+
+Answer:option c
+
+43.What will be the output of the program?
+
+public class NFE 
+{
+    public static void main(String [] args) 
+    {
+    String s = "42";
+        try 
+        {
+            s = s.concat(".5");  /* Line 8 */
+            double d = Double.parseDouble(s);
+            s = Double.toString(d);
+            int x = (int) Math.ceil(Double.valueOf(s).doubleValue());
+            System.out.println(x);
+        }
+        catch (NumberFormatException e) 
+        {
+            System.out.println("bad number");
+        }
+    }
+}
+
+A. 	42
+B. 	42.5
+C. 	43
+D. 	bad number
+
+Answer: Option C
+
+
+  	
+
+44.What will be the output of the program?
+
+System.out.println(Math.sqrt(-4D));
+
+A. 	-2
+B. 	NaN
+C. 	Compile Error
+D. 	Runtime Exception
+
+Answer: Option B
+
+ 	
+
+45.What will be the output of the program?
+
+interface Foo141 
+{ 
+    int k = 0; /* Line 3 */
+} 
+public class Test141 implements Foo141 
+{
+    public static void main(String args[]) 
+    {
+        int i; 
+        Test141 test141 = new Test141(); 
+        i = test141.k; /* Line 11 */
+        i = Test141.k; 
+        i = Foo141.k; 
+    } 
+}
+
+A. 	Compilation fails.
+B. 	Compiles and runs ok.
+C. 	Compiles but throws an Exception at runtime.
+D. 	Compiles but throws a RuntimeException at runtime.
+
+Answer: Option B
+
+46.What will be the output of the program?
+
+String a = "newspaper";
+a = a.substring(5,7);
+char b = a.charAt(1);
+a = a + b;
+System.out.println(a);
+
+A. 	apa
+B. 	app
+C. 	apea
+D. 	apep
+
+Answer: Option B
+
+  	
+
+47.What will be the output of the program?
+
+public class StringRef 
+{
+    public static void main(String [] args) 
+    {
+        String s1 = "abc";
+        String s2 = "def";
+        String s3 = s2;   /* Line 7 */
+        s2 = "ghi";
+        System.out.println(s1 + s2 + s3);
+    }
+}
+
+A. 	abcdefghi
+B. 	abcdefdef
+C. 	abcghidef
+D. 	abcghighi
+
+Answer: Option C
+
+  	
+
+48.What will be the output of the program?
+
+public class Test138 
+{ 
+    public static void stringReplace (String text) 
+    {
+        text = text.replace ('j' , 'c'); /* Line 5 */
+    } 
+    public static void bufferReplace (StringBuffer text) 
+    { 
+        text = text.append ("c");  /* Line 9 */
+    } 
+    public static void main (String args[]) 
+    { 
+        String textString = new String ("java"); 
+        StringBuffer textBuffer = new StringBuffer ("java"); /* Line 14 */
+        stringReplace(textString); 
+        bufferReplace(textBuffer); 
+        System.out.println (textString + textBuffer); 
+    } 
+}
+
+A. 	java
+B. 	javac
+C. 	javajavac
+D. 	Compile error
+
+Answer: Option C
+
+  	
+
+49.What will be the output of the program?
+
+class Tree { } 
+class Pine extends Tree { } 
+class Oak extends Tree { } 
+public class Forest1 
+{ 
+    public static void main (String [] args)
+    { 
+        Tree tree = new Pine(); 
+        if( tree instanceof Pine ) 
+            System.out.println ("Pine"); 
+        else if( tree instanceof Tree ) 
+            System.out.println ("Tree"); 
+        else if( tree instanceof Oak ) 
+            System.out.println ( "Oak" ); 
+        else 
+            System.out.println ("Oops "); 
+    } 
+}
+
+A. 	Pine
+B. 	Tree
+C. 	Forest
+D. 	Oops
+
+Answer: Option A
+
+50.What will be the output of the program?
+
+String d = "bookkeeper";
+d.substring(1,7);
+d = "w" + d;
+d.append("woo");  /* Line 4 */
+System.out.println(d);
+
+A. 	wookkeewoo
+B. 	wbookkeeper
+C. 	wbookkeewoo
+D. 	Compilation fails.
+
+Answer: Option D
+
+51.What will be the output of the program?
+
+
+String a = "ABCD"; 
+String b = a.toLowerCase(); 
+b.replace('a','d'); 
+b.replace('b','c'); 
+System.out.println(b);
+
+A. 	abcd
+B. 	ABCD
+C. 	dccd
+D. 	dcba
+
+Answer: Option A
+  	
+
+52.What will be the output of the program?
+
+public class ExamQuestion6 
+{
+    static int x; 
+    boolean catch()
+    {
+        x++; 
+        return true; 
+    } 
+    public static void main(String[] args)
+    {
+        x=0; 
+        if ((catch() | catch()) || catch()) 
+            x++; 
+        System.out.println(x); 
+    } 
+}
+
+A. 	1
+B. 	2
+C. 	3
+D. 	Compilation Fails
+
+Answer: Option D
+
+53.What will be the output of the program?
+
+public class Test 
+{ 
+    public static void main(String[] args) 
+    {
+        final StringBuffer a = new StringBuffer(); 
+        final StringBuffer b = new StringBuffer(); 
+
+        new Thread() 
+        { 
+            public void run() 
+            {
+                System.out.print(a.append("A")); 
+                synchronized(b) 
+                { 
+                    System.out.print(b.append("B")); 
+                } 
+            } 
+        }.start(); 
+            
+        new Thread() 
+        {
+            public void run() 
+            {
+                System.out.print(b.append("C")); 
+                synchronized(a) 
+                {
+                    System.out.print(a.append("D")); 
+                } 
+            } 
+        }.start(); 
+    } 
+}
+
+A. 	ACCBAD
+B. 	ABBCAD
+C. 	CDDACB
+D. 	Indeterminate output
+
+Answer: Option D
+
+  	
+
+54.What will be the output of the program?
+
+String s = "hello"; 
+Object o = s; 
+if( o.equals(s) )
+{
+    System.out.println("A"); 
+} 
+else
+{
+    System.out.println("B"); 
+} 
+if( s.equals(o) )
+{
+    System.out.println("C"); 
+} 
+else
+{ 
+    System.out.println("D"); 
+}
+
+    A
+    B
+    C
+    D
+
+A. 	1 and 3
+B. 	2 and 4
+C. 	3 and 4
+D. 	1 and 2
+
+Answer: Option A
+
+ 	
+
+55.What will be the output of the program (in jdk1.6 or above)?
+
+public class BoolTest 
+{
+    public static void main(String [] args) 
+    {
+        Boolean b1 = new Boolean("false");
+        boolean b2;
+        b2 = b1.booleanValue();
+        if (!b2) 
+        {
+            b2 = true;
+            System.out.print("x ");
+        }
+        if (b1 & b2) /* Line 13 */
+        {
+            System.out.print("y ");
+        }
+        System.out.println("z");
+    }
+}
+
+A. 	z
+B. 	x z
+C. 	y z
+D. 	Compilation fails.
+
+Answer: Option B
+
+56.Which statement is true given the following?
+
+Double d = Math.random();
+
+A. 	0.0 < d <= 1.0
+B. 	0.0 <= d < 1.0
+C. 	Compilation fail
+D. 	Cannot say.
+
+Answer: Option B
+
+57.Which two statements are true about wrapper or String classes?
+
+    If x and y refer to instances of different wrapper classes, then the fragment x.equals(y) will cause a compiler failure.
+    If x and y refer to instances of different wrapper classes, then x == y can sometimes be true.
+    If x and y are String references and if x.equals(y) is true, then x == y is true.
+    If x, y, and z refer to instances of wrapper classes and x.equals(y) is true, and y.equals(z) is true, then z.equals(x) will always be true.
+    If x and y are String references and x == y is true, then y.equals(x) will be true.
+
+A. 	1 and 2
+B. 	2 and 3
+C. 	3 and 4
+D. 	4 and 5
+
+Answer:option D
+
+58.Which of the following will produce an answer that is closest in value to a double, d, while not being greater than d?
+A. 	(int)Math.min(d);
+B. 	(int)Math.max(d);
+C. 	(int)Math.abs(d);
+D. 	(int)Math.floor(d);
+
+Answer: Option D
+  	
+
+59.What two statements are true about the result obtained from calling Math.random()?
+
+    The result is less than 0.0.
+    The result is greater than or equal to 0.0..
+    The result is less than 1.0.
+    The result is greater than 1.0.
+    The result is greater than or equal to 1.0.
+
+A. 	1 and 2
+B. 	2 and 3
+C. 	3 and 4
+D. 	4 and 5
+
+Answer: Option B
+
+60.What will be the output of the program?
+
+public class Foo 
+{  
+    public static void main(String[] args) 
+    {
+        try 
+        { 
+            return; 
+        } 
+        finally 
+        {
+            System.out.println( "Finally" ); 
+        } 
+    } 
+}
+
+A. 	Finally
+B. 	Compilation fails.
+C. 	The code runs with no output.
+D. 	An exception is thrown at runtime.
+
+Answer: Option A

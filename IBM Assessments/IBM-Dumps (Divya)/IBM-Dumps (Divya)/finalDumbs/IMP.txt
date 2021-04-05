@@ -1,0 +1,96 @@
+
+1)This is Example For--------------------
+-----------------------
+
+
+public class application{
+ public static void main(string args) 
+{ 
+Generator generator= ne Generator();
+generator.generator();
+}
+}                     --------Decoupling
+------------------------------------------
+2)what are the three basic steps of creating a simple spring 
+application
+ A       
+
+3)what is the alternative to create load and managed beans in
+ spring app
+  C
+4)types of dependency lookup includes
+  may be D
+
+5)which these are mvc annotations
+  @Controller
+  @RequestMapping
+@RequestVariable
+@RequestParam
+
+
+6)what is the software architecture follows spring MVC?
+   MVC
+
+7)what is the valid bean for scope=request
+
+  
+
+8)java based configuration which is the class that sets the 
+spring context
+Spring bean java based configuration using @Configuration and @Bean
+Ans is: @Configuration
+
+
+9)which module helps for decoupling code like logging?
+
+10)basic packages for spring ioc container?
+The org.springframework.beans and org.springframework.context
+ packages are the basis for Spring Framework's IoC container. 
+
+
+11)what is annotation aspect style?
+  @Aspectj
+  @Aspect
+
+
+12)which one is Correct about Inner Beans?
+
+<bean id = "outerBean" class = "...">
+      <property name = "target">
+         <bean id = "innerBean" class = "..."/>
+      </property>
+   </bean>
+
+13)a collection value of the type java.util .Properties 
+is defined by what element
+
+<props>
+List – <list/>
+Set – <set/>
+Map – <map/>
+Properties – <props/>
+
+14)which class sets spring context in java based configuration
+@Configuration
+
+
+15)which annotation is used inorder to specify a method as transactional
+
+
+@Transactional
+@Transactional
+public void businessLogic() {
+... use entity manager inside a transaction ...
+}
+
+16)What will be the result if you use Web-aware Spring 
+ApplicationContext scopes in a regular Spring IocContainer
+   A. It will return nothing
+   B. I t will return a NullPointer Exception
+   C. it will Return a illigalException
+   D.It will Work Correctly
+
+  may be Ans is B but Check it once 
+
+
+

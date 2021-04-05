@@ -1,0 +1,189 @@
+1. Spring-WS provides various abstract endpoint classes for you to process the request.
+a) org.springframework.ws.server.endpoint  - ANS
+b) org.springframework.ws.server
+c) org.springframework.*
+d) none of the mentioned
+
+
+
+2.  Which method is used to gracefully shutdown all the bean processes after closing the spring container?
+Ans A. shutdownHook 
+B. destory method 
+C. none of the mentioned
+ D. all of the mentioned
+
+
+3. Which one is the default scope of the beans?
+A. Prototype 
+B. Session 
+C. Request
+Ans- D. Singleton
+
+
+4. Declaring bean form object properties can be done using:-
+Ans - A. PropertyPathFactoryBean 
+B. util:constant 
+C. None of the mentioned 
+D. All of the mentioned
+
+
+
+5. What are the ways to create custom Property Editors?
+Ans A. implement PropertyEditor interface
+ Ans B. extend PropertyEditorSupport Class 
+C. none of the mentioned 
+ - D. all of the mentioned
+
+
+
+6. Spring Web MVC (and in Spring in general) is the "Open for extension, closed for modification" principle.The reason that this principle is being mentioned here is because a number of methods in the core classes in Spring Web MVC are marked final.
+
+
+A.true  Ans
+B.false
+
+7. Which of the among is not a special bean in  WebApplicationContext?
+
+a.Locale resolver
+b.Theme resolver
+c.multipart file
+d.resolver  
+e.Handler exception resolver
+f.Handler mappings
+g. Non of the above -Ans
+
+
+8. How the Spring DispatcherServlet  supports for returning the last-modification-date, as specified by the Servlet API ?
+
+
+a.By implementing the LastModified interface --Ans
+b.By implementing the LastSessionModified interface
+c.By implementing the LastDateModified interface
+d.By implementing the LastModifiedDate interface
+
+9. @RequestMapping annotation is used to map a HTTP request method (GET or POST) to a specific class or method in the controller which will handle the respective request?
+
+1.   false
+2.   true --Ans
+
+
+
+
+10. Which of the following exception classes is related to all the exceptions thrown in spring applications?
+
+1.   DataAccessException.---Ans
+2.   ArrayIndexOutofBound.
+3.   NullPointerException.
+4.   SpringException.
+5.   None of these.
+
+11. Which of the following is true for Controllers in Spring?
+
+1.   An abstract class.
+2.   An interface.---Ans
+3.   Concrete class.
+4.   Final class.
+5.   None of these.
+
+12. Annotations work as metadata for classes and Spring uses annotations as an alternative to XML for declarative configuration. Is it true or false?
+
+1.   false
+2.   true----Ans
+
+13. Which of the following specify the points where weaving can be applied?
+
+1.   Compile Time , Classload Time , load time.
+2.   Compile Time , Classload Time , Runtime----------Ans
+3.   Compile Time and Runtime.
+4.   Compile Time and Classload Time.
+5.   None of these.
+
+14. Which of the following layers the @Controller annotation is used in?
+
+1.   Business layer
+2.   Service layer.
+3.   Presentation layer..----Ans
+4.   Session layer.
+5.   None of these.
+
+15. Which Of The Following Is Not A Valid Difference Between @Inject And @Autowired Annotations?
+1.   @Inject annotation is part of Java EE 7’s Context and Dependency Injection framework while @Autowired is the Spring Frameworks own implementation
+2.   @Autowired is a legacy annotation whereas @Inject is its latest version..------Ans
+3.   There is no difference and both can be used interchangeably.
+4.   None of these.
+
+16.Which of the following correctly mentions the Autowire types?
+
+1.   None of these.
+2.   byName , byMethod, constructor and autodetect.
+3.   byName , byType, destructor and autodetect.
+4.   byName , byType, constructor and autodetect.-------Ans
+5.   byName , byType, constructor and autocorrect.-------
+
+ 
+
+
+17. Which of the following statements is true?
+
+1.   BeanFactory extends ApplicationContext.
+2.   ApplicationContext extends BeanFactory.-------Ans
+3.   ApplicationContext implements BeanFactory.
+4.   BeanFactory implements ApplicationContext
+5.   None of these.
+
+
+
+18. Which of the following is advice supported by Aspect Annotation?
+A. @Before B. @After C. @AfterReturning 
+D. All of the mentioned---Ans
+
+
+
+19.Which advice is executed only when joint point returns or throws an exception?
+A. @Before 
+B. @After 
+C. @AfterReturning -----Ans
+D. @AfterThrowing
+
+
+
+20.  Special compiler used during weaving
+A. jvm B. gcc 
+C. ajc --------Ans
+D. none of the mentioned
+
+
+
+21. How to inject Spring bean into domain objcts
+A. AOP 
+B. XML C. AspectJ 
+D. Java Based------Ans
+
+
+
+22. Method used to process bean before initialization callback
+A. scope 
+B. postProcessAfterInitialization() ------Ans
+C. postProcessBeforeInitialization()
+ D. it’s own constructor
+
+
+
+23. Which attribute is used to set the scope of the bean?
+A. setScope B. scope------Ans
+ C. getScope D. none of the mentioned
+
+
+
+24. Which attribute is used to specify classname of the bean?
+A. name B. id C. class ------Ans
+D. constructor-args
+
+
+
+
+25.  Which tag is also allowed by static field?
+A. util:constant ------Ans
+B. list C. set D. constructor-args
+
+
